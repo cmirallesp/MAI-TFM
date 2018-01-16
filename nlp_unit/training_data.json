@@ -1,0 +1,1937 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "text": "add a model method"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "text": "describe a model method"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 32,
+            "end": 36
+          }
+        ],
+        "text": "I want to describe a method for user model"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "method_name",
+            "value": "getname",
+            "start": 28,
+            "end": 35
+          },
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 40,
+            "end": 44
+          }
+        ],
+        "text": "I want to describe a method getname for user entity"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "method_name",
+            "value": "getname",
+            "start": 23,
+            "end": 30
+          },
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 35,
+            "end": 39
+          }
+        ],
+        "text": "I want to add a method getname for user entity"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "method_name",
+            "value": "getname",
+            "start": 4,
+            "end": 11
+          },
+          {
+            "entity": "op",
+            "value": "returns",
+            "start": 17,
+            "end": 24
+          },
+          {
+            "entity": "expected_value",
+            "value": "\"Anna\"",
+            "start": 25,
+            "end": 31
+          },
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 35,
+            "end": 39
+          }
+        ],
+        "text": "Add getname that returns \"Anna\" to user"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "method_name",
+            "value": "people-in-project",
+            "start": 25,
+            "end": 42
+          },
+          {
+            "entity": "op",
+            "value": "returns",
+            "start": 48,
+            "end": 55
+          },
+          {
+            "entity": "expected_value",
+            "value": "\"john, david and Elena\"",
+            "start": 56,
+            "end": 79
+          },
+          {
+            "entity": "model_name",
+            "value": "projects",
+            "start": 83,
+            "end": 91
+          }
+        ],
+        "text": "I want to add the method people-in-project that returns \"john, david and Elena\" to projects"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "method_name",
+            "value": "people-in-project",
+            "start": 23,
+            "end": 40
+          },
+          {
+            "entity": "op",
+            "value": "returns",
+            "start": 46,
+            "end": 53
+          },
+          {
+            "entity": "expected_value",
+            "value": "\"john, david and Elena\"",
+            "start": 54,
+            "end": 77
+          },
+          {
+            "entity": "model_name",
+            "value": "project",
+            "start": 33,
+            "end": 40
+          }
+        ],
+        "text": "I want to add a method people-in-project that returns \"john, david and Elena\" to project"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "Given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 9,
+            "end": 13
+          },
+          {
+            "entity": "method_name",
+            "value": "getname",
+            "start": 25,
+            "end": 32
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 40,
+            "end": 46
+          },
+          {
+            "entity": "expected_value",
+            "value": "\"Daniel Mur\"",
+            "start": 47,
+            "end": 59
+          },
+          {
+            "entity": "par_value",
+            "value": "\"Daniel\"",
+            "start": 64,
+            "end": 72
+          },
+          {
+            "entity": "par_value",
+            "value": "\"Mur\"",
+            "start": 77,
+            "end": 82
+          }
+        ],
+        "text": "Given an user the method getname should return \"Daniel Mur\" for \"Daniel\" and \"Mur\" parameters"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "Given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "calculator",
+            "start": 8,
+            "end": 18
+          },
+          {
+            "entity": "method_name",
+            "value": "sum",
+            "start": 30,
+            "end": 33
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 41,
+            "end": 47
+          },
+          {
+            "entity": "expected_value",
+            "value": "\"5\"",
+            "start": 48,
+            "end": 51
+          },
+          {
+            "entity": "par_value",
+            "value": "\"3\"",
+            "start": 56,
+            "end": 59
+          },
+          {
+            "entity": "par_value",
+            "value": "\"2\"",
+            "start": 64,
+            "end": 67
+          }
+        ],
+        "text": "Given a calculator the method sum should return \"5\" for \"3\" and \"2\" parameters"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "Given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "list",
+            "start": 8,
+            "end": 12
+          },
+          {
+            "entity": "method_name",
+            "value": "add",
+            "start": 24,
+            "end": 27
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 35,
+            "end": 41
+          },
+          {
+            "entity": "expected_value",
+            "value": "\"5,7\"",
+            "start": 42,
+            "end": 47
+          },
+          {
+            "entity": "par_value",
+            "value": "\"5\"",
+            "start": 52,
+            "end": 55
+          },
+          {
+            "entity": "par_value",
+            "value": "\"7\"",
+            "start": 60,
+            "end": 63
+          }
+        ],
+        "text": "Given a list the method add should return \"5,7\" for \"5\" and \"7\" parameters"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "Given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "list",
+            "start": 8,
+            "end": 12
+          },
+          {
+            "entity": "method_name",
+            "value": "add",
+            "start": 24,
+            "end": 27
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 35,
+            "end": 41
+          },
+          {
+            "entity": "expected_value",
+            "value": "\"a,b\"",
+            "start": 42,
+            "end": 47
+          },
+          {
+            "entity": "par_value",
+            "value": "\"a\"",
+            "start": 52,
+            "end": 55
+          },
+          {
+            "entity": "par_value",
+            "value": "\"b\"",
+            "start": 60,
+            "end": 63
+          }
+        ],
+        "text": "Given a list the method add should return \"a,b\" for \"a\" and \"b\" parameters"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "Given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "project",
+            "start": 8,
+            "end": 15
+          },
+          {
+            "entity": "method_name",
+            "value": "add-priority",
+            "start": 27,
+            "end": 39
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 47,
+            "end": 53
+          },
+          {
+            "entity": "expected_value",
+            "value": "\"5\"",
+            "start": 54,
+            "end": 57
+          },
+          {
+            "entity": "par_value",
+            "value": "\"1\"",
+            "start": 62,
+            "end": 65
+          },
+          {
+            "entity": "par_value",
+            "value": "\"5\"",
+            "start": 54,
+            "end": 57
+          }
+        ],
+        "text": "Given a project the method add-priority should return \"5\" for \"1\" and \"5\" parameters"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "Given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 9,
+            "end": 13
+          },
+          {
+            "entity": "method_name",
+            "value": "getname",
+            "start": 25,
+            "end": 32
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 40,
+            "end": 46
+          },
+          {
+            "entity": "expected_value",
+            "value": "\"Daniel Mur\"",
+            "start": 47,
+            "end": 59
+          },
+          {
+            "entity": "par_value",
+            "value": "\"Daniel\"",
+            "start": 76,
+            "end": 84
+          },
+          {
+            "entity": "par_value",
+            "value": "\"Mur\"",
+            "start": 89,
+            "end": 94
+          }
+        ],
+        "text": "Given an user the method getname should return \"Daniel Mur\" with parameters \"Daniel\" and \"Mur\""
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "Given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "project",
+            "start": 8,
+            "end": 15
+          },
+          {
+            "entity": "method_name",
+            "value": "add_tasks",
+            "start": 27,
+            "end": 36
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 44,
+            "end": 50
+          },
+          {
+            "entity": "expected_value",
+            "value": "\"t1,t2,t3,t4,t100\"",
+            "start": 51,
+            "end": 69
+          },
+          {
+            "entity": "par_value",
+            "value": "\"t1\"",
+            "start": 74,
+            "end": 78
+          },
+          {
+            "entity": "par_value",
+            "value": "\"t2\"",
+            "start": 80,
+            "end": 84
+          },
+          {
+            "entity": "par_value",
+            "value": "\"t3\"",
+            "start": 86,
+            "end": 90
+          },
+          {
+            "entity": "par_value",
+            "value": "\"t4\"",
+            "start": 92,
+            "end": 96
+          },
+          {
+            "entity": "par_value",
+            "value": "\"t100\"",
+            "start": 101,
+            "end": 107
+          }
+        ],
+        "text": "Given a project the method add_tasks should return \"t1,t2,t3,t4,t100\" for \"t1\", \"t2\", \"t3\", \"t4\" and \"t100\" parameters"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "Given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "string",
+            "start": 8,
+            "end": 14
+          },
+          {
+            "entity": "method_name",
+            "value": "concat",
+            "start": 26,
+            "end": 32
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 40,
+            "end": 46
+          },
+          {
+            "entity": "expected_value",
+            "value": "\"tt,aa,zz,ff,mm\"",
+            "start": 47,
+            "end": 63
+          },
+          {
+            "entity": "par_value",
+            "value": "\"tt\"",
+            "start": 68,
+            "end": 72
+          },
+          {
+            "entity": "par_value",
+            "value": "\"aa\"",
+            "start": 74,
+            "end": 78
+          },
+          {
+            "entity": "par_value",
+            "value": "\"zz\"",
+            "start": 80,
+            "end": 84
+          },
+          {
+            "entity": "par_value",
+            "value": "\"ff\"",
+            "start": 86,
+            "end": 90
+          },
+          {
+            "entity": "par_value",
+            "value": "\"mm\"",
+            "start": 95,
+            "end": 99
+          }
+        ],
+        "text": "Given a string the method concat should return \"tt,aa,zz,ff,mm\" for \"tt\", \"aa\", \"zz\", \"ff\" and \"mm\" parameters"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "Given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "string",
+            "start": 8,
+            "end": 14
+          },
+          {
+            "entity": "method_name",
+            "value": "concat",
+            "start": 26,
+            "end": 32
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 40,
+            "end": 46
+          },
+          {
+            "entity": "expected_value",
+            "value": "\"rr,aa,zz,ff,mm\"",
+            "start": 47,
+            "end": 63
+          },
+          {
+            "entity": "par_value",
+            "value": "\"a\"",
+            "start": 68,
+            "end": 71
+          },
+          {
+            "entity": "par_value",
+            "value": "\"aa\"",
+            "start": 72,
+            "end": 76
+          },
+          {
+            "entity": "par_value",
+            "value": "\"jj\"",
+            "start": 77,
+            "end": 81
+          },
+          {
+            "entity": "par_value",
+            "value": "\"rr\"",
+            "start": 82,
+            "end": 86
+          },
+          {
+            "entity": "par_value",
+            "value": "\"mm\"",
+            "start": 91,
+            "end": 95
+          }
+        ],
+        "text": "Given a string the method concat should return \"rr,aa,zz,ff,mm\" for \"a\",\"aa\",\"jj\",\"rr\" and \"mm\" parameters"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "Given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 9,
+            "end": 13
+          },
+          {
+            "entity": "method_name",
+            "value": "fullname",
+            "start": 25,
+            "end": 33
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 41,
+            "end": 47
+          },
+          {
+            "entity": "expected_value",
+            "value": "\"david mor mor\"",
+            "start": 48,
+            "end": 63
+          },
+          {
+            "entity": "par_value",
+            "value": "\"david\"",
+            "start": 68,
+            "end": 75
+          },
+          {
+            "entity": "par_value",
+            "value": "\"mor\"",
+            "start": 76,
+            "end": 81
+          },
+          {
+            "entity": "par_value",
+            "value": "\"mor\"",
+            "start": 76,
+            "end": 81
+          }
+        ],
+        "text": "Given an user the method fullname should return \"david mor mor\" for \"david\",\"mor\" and \"mor\" parameters"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "Given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 9,
+            "end": 13
+          },
+          {
+            "entity": "method_name",
+            "value": "fullname",
+            "start": 25,
+            "end": 33
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 41,
+            "end": 47
+          },
+          {
+            "entity": "expected_value",
+            "value": "\"montse kol zas\"",
+            "start": 48,
+            "end": 64
+          },
+          {
+            "entity": "par_name",
+            "value": "first-name",
+            "start": 69,
+            "end": 79
+          },
+          {
+            "entity": "par_value",
+            "value": "\"montse\"",
+            "start": 80,
+            "end": 88
+          },
+          {
+            "entity": "par_name",
+            "value": "second-name",
+            "start": 90,
+            "end": 101
+          },
+          {
+            "entity": "par_value",
+            "value": "\"kol\"",
+            "start": 102,
+            "end": 107
+          },
+          {
+            "entity": "par_name",
+            "value": "third-name",
+            "start": 109,
+            "end": 119
+          },
+          {
+            "entity": "par_value",
+            "value": "\"zas\"",
+            "start": 120,
+            "end": 125
+          }
+        ],
+        "text": "Given an user the method fullname should return \"montse kol zas\" for first-name \"montse\", second-name \"kol\", third-name \"zas\" parameters"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "Given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 9,
+            "end": 13
+          },
+          {
+            "entity": "method_name",
+            "value": "fullname",
+            "start": 25,
+            "end": 33
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 41,
+            "end": 47
+          },
+          {
+            "entity": "expected_value",
+            "value": "\"pol jil mir\"",
+            "start": 48,
+            "end": 61
+          },
+          {
+            "entity": "par_value",
+            "value": "\"pol\"",
+            "start": 66,
+            "end": 71
+          },
+          {
+            "entity": "par_value",
+            "value": "\"jil\"",
+            "start": 73,
+            "end": 78
+          },
+          {
+            "entity": "par_value",
+            "value": "\"mir\"",
+            "start": 80,
+            "end": 85
+          }
+        ],
+        "text": "Given an user the method fullname should return \"pol jil mir\" for \"pol\", \"jil\", \"mir\" parameters"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "Given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 9,
+            "end": 13
+          },
+          {
+            "entity": "method_name",
+            "value": "get_extension",
+            "start": 25,
+            "end": 38
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 46,
+            "end": 52
+          },
+          {
+            "entity": "expected_value",
+            "value": "\"034\"",
+            "start": 53,
+            "end": 58
+          },
+          {
+            "entity": "par_value",
+            "value": "\"034-666-636-616\"",
+            "start": 74,
+            "end": 91
+          }
+        ],
+        "text": "Given an user the method get_extension should return \"034\" with parameter \"034-666-636-616\""
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "Given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 9,
+            "end": 13
+          },
+          {
+            "entity": "method_name",
+            "value": "get-extension",
+            "start": 25,
+            "end": 38
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 46,
+            "end": 52
+          },
+          {
+            "entity": "expected_value",
+            "value": "\"034\"",
+            "start": 53,
+            "end": 58
+          },
+          {
+            "entity": "par_value",
+            "value": "\"(034) 666 636 616\"",
+            "start": 74,
+            "end": 93
+          }
+        ],
+        "text": "Given an user the method get-extension should return \"034\" with parameter \"(034) 666 636 616\""
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "Given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 9,
+            "end": 13
+          },
+          {
+            "entity": "method_name",
+            "value": "get-extension",
+            "start": 25,
+            "end": 38
+          },
+          {
+            "entity": "op",
+            "value": "returns",
+            "start": 39,
+            "end": 46
+          },
+          {
+            "entity": "expected_value",
+            "value": "\"001\"",
+            "start": 47,
+            "end": 52
+          },
+          {
+            "entity": "par_value",
+            "value": "\"(001) 666 636 616\"",
+            "start": 68,
+            "end": 87
+          }
+        ],
+        "text": "Given an user the method get-extension returns \"001\" with parameter \"(001) 666 636 616\""
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "Given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "calculator",
+            "start": 8,
+            "end": 18
+          },
+          {
+            "entity": "method_name",
+            "value": "sum",
+            "start": 32,
+            "end": 35
+          },
+          {
+            "entity": "par_value",
+            "value": "3",
+            "start": 41,
+            "end": 42
+          },
+          {
+            "entity": "par_value",
+            "value": "4",
+            "start": 47,
+            "end": 48
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 70,
+            "end": 76
+          },
+          {
+            "entity": "expected_value",
+            "value": "7",
+            "start": 77,
+            "end": 78
+          }
+        ],
+        "text": "Given a calculator and a method sum with 3 and 4 as parameters should return 7"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "Given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "calculator",
+            "start": 8,
+            "end": 18
+          },
+          {
+            "entity": "method_name",
+            "value": "sum",
+            "start": 32,
+            "end": 35
+          },
+          {
+            "entity": "par_value",
+            "value": "1",
+            "start": 50,
+            "end": 51
+          },
+          {
+            "entity": "par_value",
+            "value": "2",
+            "start": 53,
+            "end": 54
+          },
+          {
+            "entity": "par_value",
+            "value": "3",
+            "start": 55,
+            "end": 56
+          },
+          {
+            "entity": "par_value",
+            "value": "4",
+            "start": 61,
+            "end": 62
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 82,
+            "end": 88
+          },
+          {
+            "entity": "expected_value",
+            "value": "ten",
+            "start": 89,
+            "end": 92
+          }
+        ],
+        "text": "Given a calculator and a method sum that receives 1, 2,3 and 4] parameters should return ten"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "Given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "calculator",
+            "start": 8,
+            "end": 18
+          },
+          {
+            "entity": "method_name",
+            "value": "subtract",
+            "start": 30,
+            "end": 38
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 46,
+            "end": 48
+          },
+          {
+            "entity": "expected_value",
+            "value": "5",
+            "start": 49,
+            "end": 50
+          },
+          {
+            "entity": "par_value",
+            "value": "10",
+            "start": 67,
+            "end": 69
+          },
+          {
+            "entity": "par_value",
+            "value": "5",
+            "start": 49,
+            "end": 50
+          }
+        ],
+        "text": "Given a calculator the method subtract should be 5 with parameters 10 and 5"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "method_name",
+            "value": "f",
+            "start": 11,
+            "end": 12
+          },
+          {
+            "entity": "model_name",
+            "value": "calculator",
+            "start": 16,
+            "end": 26
+          },
+          {
+            "entity": "op",
+            "value": "returns",
+            "start": 27,
+            "end": 34
+          },
+          {
+            "entity": "expected_value",
+            "value": "1",
+            "start": 35,
+            "end": 36
+          },
+          {
+            "entity": "par_value",
+            "value": "5",
+            "start": 49,
+            "end": 50
+          },
+          {
+            "entity": "par_value",
+            "value": "4",
+            "start": 55,
+            "end": 56
+          }
+        ],
+        "text": "The method f in calculator returns 1 with params 5 and 4"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "method_name",
+            "value": "sum",
+            "start": 23,
+            "end": 26
+          },
+          {
+            "entity": "op",
+            "value": "returns",
+            "start": 32,
+            "end": 39
+          },
+          {
+            "entity": "expected_value",
+            "value": "3",
+            "start": 40,
+            "end": 41
+          },
+          {
+            "entity": "model_name",
+            "value": "calculator",
+            "start": 45,
+            "end": 55
+          }
+        ],
+        "text": "I want to add a method sum that returns 3 to calculator"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "method_name",
+            "value": "subtract",
+            "start": 23,
+            "end": 31
+          },
+          {
+            "entity": "op",
+            "value": "returns",
+            "start": 37,
+            "end": 44
+          },
+          {
+            "entity": "expected_value",
+            "value": "3",
+            "start": 45,
+            "end": 46
+          },
+          {
+            "entity": "model_name",
+            "value": "turing_machine",
+            "start": 50,
+            "end": 64
+          }
+        ],
+        "text": "I want to add a method subtract that returns 3 to turing_machine# synonym:first-name"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "text": "first name"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "text": "first_name"
+      },
+      {
+        "intent": "MODEL_METHOD_TEST",
+        "text": "firstname"
+      },
+      {
+        "intent": "MODEL_VALIDATION",
+        "text": "I want to describe a validation"
+      },
+      {
+        "intent": "MODEL_VALIDATION",
+        "text": "add a validation"
+      },
+      {
+        "intent": "MODEL_VALIDATION",
+        "text": "describe a validation"
+      },
+      {
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 22,
+            "end": 26
+          }
+        ],
+        "text": "I would like to add a user validation"
+      },
+      {
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 36,
+            "end": 40
+          }
+        ],
+        "text": "I want to describe a validation for user model"
+      },
+      {
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "houses",
+            "start": 15,
+            "end": 21
+          }
+        ],
+        "text": "validation for houses"
+      },
+      {
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "projects",
+            "start": 26,
+            "end": 34
+          }
+        ],
+        "text": "describe a validation for projects model"
+      },
+      {
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "project",
+            "start": 8,
+            "end": 15
+          },
+          {
+            "entity": "att_name",
+            "value": "name",
+            "start": 21,
+            "end": 25
+          },
+          {
+            "entity": "att_name",
+            "value": "num-of-tasks",
+            "start": 27,
+            "end": 39
+          },
+          {
+            "entity": "att_name",
+            "value": "num-of-people",
+            "start": 44,
+            "end": 57
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 65,
+            "end": 67
+          },
+          {
+            "entity": "method_name",
+            "value": "valid",
+            "start": 68,
+            "end": 73
+          }
+        ],
+        "text": "given a project with name, num-of-tasks and num-of-people should be valid"
+      },
+      {
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "bank account",
+            "start": 8,
+            "end": 20
+          },
+          {
+            "entity": "att_name",
+            "value": "holder",
+            "start": 26,
+            "end": 32
+          },
+          {
+            "entity": "att_name",
+            "value": "expiration date",
+            "start": 34,
+            "end": 49
+          },
+          {
+            "entity": "att_name",
+            "value": "cvv",
+            "start": 54,
+            "end": 57
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 65,
+            "end": 67
+          },
+          {
+            "entity": "method_name",
+            "value": "valid",
+            "start": 68,
+            "end": 73
+          }
+        ],
+        "text": "given a bank account with holder, expiration date and cvv should be valid"
+      },
+      {
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "bank_account",
+            "start": 8,
+            "end": 20
+          },
+          {
+            "entity": "att_name",
+            "value": "holder",
+            "start": 26,
+            "end": 32
+          },
+          {
+            "entity": "att_name",
+            "value": "expiration_date",
+            "start": 34,
+            "end": 49
+          },
+          {
+            "entity": "att_name",
+            "value": "cvv",
+            "start": 54,
+            "end": 57
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 65,
+            "end": 67
+          },
+          {
+            "entity": "method_name",
+            "value": "valid",
+            "start": 68,
+            "end": 73
+          }
+        ],
+        "text": "given a bank_account with holder, expiration_date and cvv should be valid"
+      },
+      {
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "bank-account",
+            "start": 8,
+            "end": 20
+          },
+          {
+            "entity": "att_name",
+            "value": "holder",
+            "start": 26,
+            "end": 32
+          },
+          {
+            "entity": "att_name",
+            "value": "expiration-date",
+            "start": 34,
+            "end": 49
+          },
+          {
+            "entity": "att_name",
+            "value": "cvv",
+            "start": 54,
+            "end": 57
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 65,
+            "end": 67
+          },
+          {
+            "entity": "method_name",
+            "value": "valid",
+            "start": 68,
+            "end": 73
+          }
+        ],
+        "text": "given a bank-account with holder, expiration-date and cvv should be valid"
+      },
+      {
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "bankaccount",
+            "start": 8,
+            "end": 19
+          },
+          {
+            "entity": "att_name",
+            "value": "holder",
+            "start": 25,
+            "end": 31
+          },
+          {
+            "entity": "att_name",
+            "value": "expiration_date",
+            "start": 33,
+            "end": 48
+          },
+          {
+            "entity": "att_name",
+            "value": "cvv",
+            "start": 53,
+            "end": 56
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 64,
+            "end": 66
+          },
+          {
+            "entity": "method_name",
+            "value": "valid",
+            "start": 67,
+            "end": 72
+          }
+        ],
+        "text": "given a bankaccount with holder, expiration_date and cvv should be valid"
+      },
+      {
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "car",
+            "start": 8,
+            "end": 11
+          },
+          {
+            "entity": "att_name",
+            "value": "color",
+            "start": 17,
+            "end": 22
+          },
+          {
+            "entity": "att_name",
+            "value": "speed",
+            "start": 27,
+            "end": 32
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 43,
+            "end": 45
+          },
+          {
+            "entity": "method_name",
+            "value": "valid",
+            "start": 46,
+            "end": 51
+          }
+        ],
+        "text": "given a car with color and speed it should be valid"
+      },
+      {
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "house",
+            "start": 8,
+            "end": 13
+          },
+          {
+            "entity": "att_name",
+            "value": "area",
+            "start": 19,
+            "end": 23
+          },
+          {
+            "entity": "att_name",
+            "value": "rooms",
+            "start": 25,
+            "end": 30
+          },
+          {
+            "entity": "att_name",
+            "value": "washroom",
+            "start": 32,
+            "end": 40
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 48,
+            "end": 50
+          },
+          {
+            "entity": "method_name",
+            "value": "valid",
+            "start": 51,
+            "end": 56
+          }
+        ],
+        "text": "given a house with area, rooms, washroom should be valid"
+      },
+      {
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "world cities",
+            "start": 8,
+            "end": 20
+          },
+          {
+            "entity": "att_name",
+            "value": "area",
+            "start": 26,
+            "end": 30
+          },
+          {
+            "entity": "att_name",
+            "value": "name",
+            "start": 35,
+            "end": 39
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 47,
+            "end": 49
+          },
+          {
+            "entity": "method_name",
+            "value": "valid",
+            "start": 50,
+            "end": 55
+          }
+        ],
+        "text": "given a world cities with area and name should be valid"
+      },
+      {
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "world-cities",
+            "start": 8,
+            "end": 20
+          },
+          {
+            "entity": "att_name",
+            "value": "area",
+            "start": 26,
+            "end": 30
+          },
+          {
+            "entity": "att_name",
+            "value": "city name",
+            "start": 35,
+            "end": 44
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 52,
+            "end": 54
+          },
+          {
+            "entity": "method_name",
+            "value": "valid",
+            "start": 55,
+            "end": 60
+          }
+        ],
+        "text": "given a world-cities with area and city name should be valid"
+      },
+      {
+        "intent": "SERVICE_TEST",
+        "text": "describe a new functionality"
+      },
+      {
+        "intent": "SERVICE_TEST",
+        "text": "add service method"
+      },
+      {
+        "intent": "SERVICE_TEST",
+        "text": "add application functionality"
+      },
+      {
+        "intent": "SERVICE_TEST",
+        "text": "I want to describe a service method"
+      },
+      {
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "Given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "users",
+            "start": 16,
+            "end": 21
+          },
+          {
+            "entity": "att_name",
+            "value": "username",
+            "start": 31,
+            "end": 39
+          },
+          {
+            "entity": "att_name",
+            "value": "email",
+            "start": 42,
+            "end": 47
+          },
+          {
+            "entity": "att_value",
+            "value": "Bob Jones",
+            "start": 51,
+            "end": 60
+          },
+          {
+            "entity": "att_value",
+            "value": "bob@bob.bob",
+            "start": 66,
+            "end": 77
+          },
+          {
+            "entity": "att_value",
+            "value": "Alice Smith",
+            "start": 88,
+            "end": 99
+          },
+          {
+            "entity": "att_value",
+            "value": "alice@alice.alice",
+            "start": 103,
+            "end": 120
+          },
+          {
+            "entity": "att_value",
+            "value": "Robert Grimm",
+            "start": 125,
+            "end": 137
+          },
+          {
+            "entity": "att_value",
+            "value": "robert@grimm.grimm",
+            "start": 140,
+            "end": 158
+          },
+          {
+            "entity": "ctx",
+            "value": "And",
+            "start": 160,
+            "end": 163
+          },
+          {
+            "entity": "method_name",
+            "value": "sign in",
+            "start": 166,
+            "end": 173
+          },
+          {
+            "entity": "par_value",
+            "value": "\"robert@grimm.grimm\"",
+            "start": 177,
+            "end": 197
+          },
+          {
+            "entity": "ctx",
+            "value": "And",
+            "start": 160,
+            "end": 163
+          },
+          {
+            "entity": "method_name",
+            "value": "am on",
+            "start": 203,
+            "end": 208
+          },
+          {
+            "entity": "par_value",
+            "value": "\"alice@alice.alice\"'s",
+            "start": 209,
+            "end": 230
+          },
+          {
+            "entity": "ctx",
+            "value": "And",
+            "start": 160,
+            "end": 163
+          },
+          {
+            "entity": "method_name",
+            "value": "add",
+            "start": 242,
+            "end": 245
+          },
+          {
+            "entity": "par_value",
+            "value": "\"Unicorns\"",
+            "start": 263,
+            "end": 273
+          },
+          {
+            "entity": "par_name",
+            "value": "aspect",
+            "start": 274,
+            "end": 280
+          }
+        ],
+        "text": "Given following users exist: | username | email || Bob Jones    | bob@bob.bob        || Alice Smith  | alice@alice.alice  || Robert Grimm | robert@grimm.grimm |And I sign in as \"robert@grimm.grimm\"And I am on \"alice@alice.alice\"'s page And I add the person to my \"Unicorns\" aspect"
+      },
+      {
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "entity": "ctx",
+            "value": "Given",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "entity": "model_name",
+            "value": "bank_accounts",
+            "start": 16,
+            "end": 29
+          },
+          {
+            "entity": "att_name",
+            "value": "num",
+            "start": 39,
+            "end": 42
+          },
+          {
+            "entity": "att_name",
+            "value": "balance",
+            "start": 45,
+            "end": 52
+          },
+          {
+            "entity": "att_value",
+            "value": "ES123",
+            "start": 56,
+            "end": 61
+          },
+          {
+            "entity": "att_value",
+            "value": "222",
+            "start": 67,
+            "end": 70
+          },
+          {
+            "entity": "att_value",
+            "value": "FRAT42W",
+            "start": 81,
+            "end": 88
+          },
+          {
+            "entity": "att_value",
+            "value": "10000000",
+            "start": 94,
+            "end": 102
+          },
+          {
+            "entity": "ctx",
+            "value": "And",
+            "start": 111,
+            "end": 114
+          },
+          {
+            "entity": "model_name",
+            "value": "person",
+            "start": 118,
+            "end": 124
+          },
+          {
+            "entity": "att_name",
+            "value": "email",
+            "start": 130,
+            "end": 135
+          },
+          {
+            "entity": "par_value",
+            "value": "\"robert@grimm.com",
+            "start": 136,
+            "end": 153
+          },
+          {
+            "entity": "ctx",
+            "value": "And",
+            "start": 111,
+            "end": 114
+          },
+          {
+            "entity": "method_name",
+            "value": "log in",
+            "start": 159,
+            "end": 165
+          },
+          {
+            "entity": "par_value",
+            "value": "\"robert@grimm.grimm\"",
+            "start": 169,
+            "end": 189
+          }
+        ],
+        "text": "Given following bank_accounts exist: | num | balance || ES123    | 222        || FRAT42W    | 10000000        |And an person with email \"robert@grimm.comAnd I log in as \"robert@grimm.grimm\""
+      }
+    ],
+    "regex_features": [],
+    "entity_synonyms": [
+      {
+        "value": "last-name",
+        "synonyms": [
+          "last name",
+          "last_name",
+          "lastname"
+        ]
+      }
+    ]
+  }
+}

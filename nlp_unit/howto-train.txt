@@ -1,0 +1,1 @@
+python train.py data/train1.json config/spacy_train1.json

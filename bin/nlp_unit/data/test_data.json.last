@@ -1,0 +1,1895 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "Given a document d And revisor r When d is linked to r And I call documents with r Then I expect d",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "start": 8,
+            "end": 16,
+            "value": "document",
+            "entity": "model_name"
+          },
+          {
+            "start": 17,
+            "end": 18,
+            "value": "d",
+            "entity": "instance_name"
+          },
+          {
+            "start": 23,
+            "end": 30,
+            "value": "revisor",
+            "entity": "model_name"
+          },
+          {
+            "start": 31,
+            "end": 32,
+            "value": "r",
+            "entity": "instance_name"
+          },
+          {
+            "start": 33,
+            "end": 37,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 83,
+            "end": 87,
+            "value": "Then",
+            "entity": "then"
+          },
+          {
+            "start": 53,
+            "end": 54,
+            "value": "r",
+            "entity": "instance_name"
+          },
+          {
+            "start": 38,
+            "end": 39,
+            "value": "d",
+            "entity": "sym_value"
+          },
+          {
+            "start": 66,
+            "end": 75,
+            "value": "documents",
+            "entity": "method_name"
+          },
+          {
+            "start": 81,
+            "end": 82,
+            "value": "r",
+            "entity": "sym_value"
+          },
+          {
+            "start": 97,
+            "end": 98,
+            "value": "d",
+            "entity": "expected_value"
+          },
+          {
+            "start": 40,
+            "end": 49,
+            "value": "is linked",
+            "entity": "method"
+          }
+        ]
+      },
+      {
+        "text": "Given a person When I initialize with firstname: 'David' and last-name: 'Sort' Then should be valid",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "sym_value",
+            "value": "'David'",
+            "start": 49,
+            "end": 56
+          },
+          {
+            "entity": "sym_value",
+            "value": "'Sort'",
+            "start": 72,
+            "end": 78
+          },
+          {
+            "entity": "att_name",
+            "value": "firstname",
+            "start": 38,
+            "end": 47
+          },
+          {
+            "entity": "att_name",
+            "value": "last-name",
+            "start": 61,
+            "end": 70
+          },
+          {
+            "entity": "model_name",
+            "value": "person",
+            "start": 8,
+            "end": 14
+          },
+          {
+            "entity": "method",
+            "value": "valid",
+            "start": 94,
+            "end": 99
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 91,
+            "end": 93
+          },
+          {
+            "entity": "method",
+            "value": "initialize",
+            "start": 22,
+            "end": 32
+          },
+          {
+            "start": 15,
+            "end": 19,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 79,
+            "end": 83,
+            "value": "Then",
+            "entity": "then"
+          }
+        ]
+      },
+      {
+        "text": "I want to describe a method for user model",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 32,
+            "end": 36
+          }
+        ]
+      },
+      {
+        "text": "Given a calculator cal When the method subtract with parameters 10 and 5 Then should be 5",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "calculator",
+            "start": 8,
+            "end": 18
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 23,
+            "end": 27
+          },
+          {
+            "entity": "method",
+            "value": "subtract",
+            "start": 39,
+            "end": 47
+          },
+          {
+            "entity": "sym_value",
+            "value": "10",
+            "start": 64,
+            "end": 66
+          },
+          {
+            "entity": "sym_value",
+            "value": "5",
+            "start": 71,
+            "end": 72
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 73,
+            "end": 77
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 85,
+            "end": 87
+          },
+          {
+            "start": 88,
+            "end": 89,
+            "value": "5",
+            "entity": "expected_value"
+          }
+        ]
+      },
+      {
+        "text": "Given a person p1 And a computer c1 When c1 is buyed by p1 And I call my-things with p1 Then c1 should be included",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "person",
+            "entity": "model_name"
+          },
+          {
+            "start": 15,
+            "end": 17,
+            "value": "p1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 24,
+            "end": 32,
+            "value": "computer",
+            "entity": "model_name"
+          },
+          {
+            "start": 33,
+            "end": 35,
+            "value": "c1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 41,
+            "end": 43,
+            "value": "c1",
+            "entity": "sym_value"
+          },
+          {
+            "start": 56,
+            "end": 58,
+            "value": "p1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 70,
+            "end": 79,
+            "value": "my-things",
+            "entity": "method_name"
+          },
+          {
+            "start": 85,
+            "end": 87,
+            "value": "p1",
+            "entity": "sym_value"
+          },
+          {
+            "start": 93,
+            "end": 95,
+            "value": "c1",
+            "entity": "expected_value"
+          },
+          {
+            "start": 106,
+            "end": 114,
+            "value": "included",
+            "entity": "op"
+          },
+          {
+            "start": 44,
+            "end": 52,
+            "value": "is buyed",
+            "entity": "method"
+          },
+          {
+            "start": 36,
+            "end": 40,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 88,
+            "end": 92,
+            "value": "Then",
+            "entity": "then"
+          }
+        ]
+      },
+      {
+        "text": "Given a invoice i1 And a provider p1 When p1 adds i1 And I call method invoices with p1 Then should include i1",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "invoice",
+            "start": 8,
+            "end": 15
+          },
+          {
+            "entity": "instance_name",
+            "value": "i1",
+            "start": 16,
+            "end": 18
+          },
+          {
+            "entity": "model_name",
+            "value": "provider",
+            "start": 25,
+            "end": 33
+          },
+          {
+            "entity": "instance_name",
+            "value": "p1",
+            "start": 34,
+            "end": 36
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 37,
+            "end": 41
+          },
+          {
+            "entity": "method_name",
+            "value": "invoices",
+            "start": 71,
+            "end": 79
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 88,
+            "end": 92
+          },
+          {
+            "entity": "op",
+            "value": "include",
+            "start": 100,
+            "end": 107
+          },
+          {
+            "start": 42,
+            "end": 44,
+            "value": "p1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 45,
+            "end": 49,
+            "value": "adds",
+            "entity": "method"
+          },
+          {
+            "start": 50,
+            "end": 52,
+            "value": "i1",
+            "entity": "sym_value"
+          },
+          {
+            "start": 85,
+            "end": 87,
+            "value": "p1",
+            "entity": "sym_value"
+          },
+          {
+            "start": 108,
+            "end": 110,
+            "value": "i1",
+            "entity": "expected_value"
+          }
+        ]
+      },
+      {
+        "text": "given a bank-account When I initialize with holder, expiration_date and cvv Then should be valid",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "att_name",
+            "value": "holder",
+            "start": 44,
+            "end": 50
+          },
+          {
+            "entity": "att_name",
+            "value": "expiration_date",
+            "start": 52,
+            "end": 67
+          },
+          {
+            "entity": "att_name",
+            "value": "cvv",
+            "start": 72,
+            "end": 75
+          },
+          {
+            "entity": "method",
+            "value": "valid",
+            "start": 91,
+            "end": 96
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 88,
+            "end": 90
+          },
+          {
+            "entity": "method",
+            "value": "initialize",
+            "start": 28,
+            "end": 38
+          },
+          {
+            "start": 76,
+            "end": 80,
+            "value": "Then",
+            "entity": "then"
+          },
+          {
+            "start": 21,
+            "end": 25,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 8,
+            "end": 20,
+            "value": "bank-account",
+            "entity": "model_name"
+          }
+        ]
+      },
+      {
+        "text": "Given a person p1 And a car c1 When c1 associates with p1 And I call get-cars with p1 Then c1 should be included",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "person",
+            "start": 8,
+            "end": 14
+          },
+          {
+            "entity": "instance_name",
+            "value": "p1",
+            "start": 15,
+            "end": 17
+          },
+          {
+            "entity": "model_name",
+            "value": "car",
+            "start": 24,
+            "end": 27
+          },
+          {
+            "entity": "instance_name",
+            "value": "c1",
+            "start": 28,
+            "end": 30
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 31,
+            "end": 35
+          },
+          {
+            "entity": "method_name",
+            "value": "get-cars",
+            "start": 69,
+            "end": 77
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 86,
+            "end": 90
+          },
+          {
+            "entity": "op",
+            "value": "included",
+            "start": 104,
+            "end": 112
+          },
+          {
+            "start": 36,
+            "end": 38,
+            "value": "c1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 91,
+            "end": 93,
+            "value": "c1",
+            "entity": "expected_value"
+          },
+          {
+            "start": 55,
+            "end": 57,
+            "value": "p1",
+            "entity": "sym_value"
+          },
+          {
+            "start": 39,
+            "end": 54,
+            "value": "associates with",
+            "entity": "method"
+          },
+          {
+            "start": 83,
+            "end": 85,
+            "value": "p1",
+            "entity": "sym_value"
+          }
+        ]
+      },
+      {
+        "text": "I want to add a method subtract to turing_machine",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "method",
+            "value": "subtract",
+            "start": 23,
+            "end": 31
+          },
+          {
+            "entity": "model_name",
+            "value": "turing_machine",
+            "start": 35,
+            "end": 49
+          }
+        ]
+      },
+      {
+        "text": "given a computer-screen When is created with attributes max-resolution: 1080, brand: 'samtung', dimensions: '3x10' and price: '1000\u20ac' Then is expected to be valid",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "computer-screen",
+            "start": 8,
+            "end": 23
+          },
+          {
+            "entity": "att_name",
+            "value": "brand",
+            "start": 78,
+            "end": 83
+          },
+          {
+            "entity": "att_name",
+            "value": "dimensions",
+            "start": 96,
+            "end": 106
+          },
+          {
+            "entity": "att_name",
+            "value": "price",
+            "start": 119,
+            "end": 124
+          },
+          {
+            "entity": "sym_value",
+            "value": "1080",
+            "start": 72,
+            "end": 76
+          },
+          {
+            "entity": "sym_value",
+            "value": "'samtung'",
+            "start": 85,
+            "end": 94
+          },
+          {
+            "entity": "sym_value",
+            "value": "'3x10'",
+            "start": 108,
+            "end": 114
+          },
+          {
+            "entity": "sym_value",
+            "value": "'1000\u20ac'",
+            "start": 126,
+            "end": 133
+          },
+          {
+            "entity": "method",
+            "value": "valid",
+            "start": 157,
+            "end": 162
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 154,
+            "end": 156
+          },
+          {
+            "start": 24,
+            "end": 28,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 134,
+            "end": 138,
+            "value": "Then",
+            "entity": "then"
+          },
+          {
+            "start": 29,
+            "end": 39,
+            "value": "is created",
+            "entity": "method"
+          },
+          {
+            "start": 56,
+            "end": 70,
+            "value": "max-resolution",
+            "entity": "att_name"
+          }
+        ]
+      },
+      {
+        "text": "Given an user When the method getname is called with 'Daniel' and 'Mur' Then I expect 'Daniel Mur'",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 9,
+            "end": 13
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 14,
+            "end": 18
+          },
+          {
+            "entity": "method",
+            "value": "getname",
+            "start": 30,
+            "end": 37
+          },
+          {
+            "entity": "sym_value",
+            "value": "'Daniel'",
+            "start": 53,
+            "end": 61
+          },
+          {
+            "entity": "sym_value",
+            "value": "'Mur'",
+            "start": 66,
+            "end": 71
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 72,
+            "end": 76
+          },
+          {
+            "start": 86,
+            "end": 98,
+            "value": "'Daniel Mur'",
+            "entity": "expected_value"
+          }
+        ]
+      },
+      {
+        "text": "given a ring when join with 'a' and 'b' is called then  should return 'a,b'",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "start": 8,
+            "end": 12,
+            "value": "ring",
+            "entity": "model_name"
+          },
+          {
+            "start": 13,
+            "end": 17,
+            "value": "when",
+            "entity": "when"
+          },
+          {
+            "start": 18,
+            "end": 22,
+            "value": "join",
+            "entity": "method"
+          },
+          {
+            "start": 28,
+            "end": 31,
+            "value": "'a'",
+            "entity": "sym_value"
+          },
+          {
+            "start": 36,
+            "end": 39,
+            "value": "'b'",
+            "entity": "sym_value"
+          },
+          {
+            "start": 63,
+            "end": 69,
+            "value": "return",
+            "entity": "op"
+          },
+          {
+            "start": 70,
+            "end": 75,
+            "value": "'a,b'",
+            "entity": "expected_value"
+          }
+        ]
+      },
+      {
+        "text": "describe a model\u00b4s method",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": []
+      },
+      {
+        "text": "I want to add a method sum to calculator",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "method",
+            "value": "sum",
+            "start": 23,
+            "end": 26
+          },
+          {
+            "entity": "model_name",
+            "value": "calculator",
+            "start": 30,
+            "end": 40
+          }
+        ]
+      },
+      {
+        "text": "Given a company c and a operator o When o approves c and I call approved-companies Then c should be included",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "start": 100,
+            "end": 108,
+            "value": "included",
+            "entity": "op"
+          },
+          {
+            "start": 8,
+            "end": 15,
+            "value": "company",
+            "entity": "model_name"
+          },
+          {
+            "start": 16,
+            "end": 17,
+            "value": "c",
+            "entity": "instance_name"
+          },
+          {
+            "start": 24,
+            "end": 32,
+            "value": "operator",
+            "entity": "model_name"
+          },
+          {
+            "start": 33,
+            "end": 34,
+            "value": "o",
+            "entity": "instance_name"
+          },
+          {
+            "start": 40,
+            "end": 41,
+            "value": "o",
+            "entity": "instance_name"
+          },
+          {
+            "start": 42,
+            "end": 50,
+            "value": "approves",
+            "entity": "method"
+          },
+          {
+            "start": 51,
+            "end": 52,
+            "value": "c",
+            "entity": "sym_value"
+          },
+          {
+            "start": 64,
+            "end": 82,
+            "value": "approved-companies",
+            "entity": "method_name"
+          },
+          {
+            "start": 88,
+            "end": 89,
+            "value": "c",
+            "entity": "expected_value"
+          },
+          {
+            "start": 35,
+            "end": 39,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 83,
+            "end": 87,
+            "value": "Then",
+            "entity": "then"
+          }
+        ]
+      },
+      {
+        "text": "Given a project When I instantiated with name: 'prj1', num-of-tasks: 3, deadline: '01/01/2017' and num-of-people: 5 Then should be valid",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "project",
+            "start": 8,
+            "end": 15
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 16,
+            "end": 20
+          },
+          {
+            "entity": "method",
+            "value": "instantiated",
+            "start": 23,
+            "end": 35
+          },
+          {
+            "entity": "att_name",
+            "value": "name",
+            "start": 41,
+            "end": 45
+          },
+          {
+            "entity": "sym_value",
+            "value": "'prj1'",
+            "start": 47,
+            "end": 53
+          },
+          {
+            "entity": "att_name",
+            "value": "num-of-tasks",
+            "start": 55,
+            "end": 67
+          },
+          {
+            "entity": "sym_value",
+            "value": "3",
+            "start": 69,
+            "end": 70
+          },
+          {
+            "entity": "att_name",
+            "value": "deadline",
+            "start": 72,
+            "end": 80
+          },
+          {
+            "entity": "sym_value",
+            "value": "'01/01/2017'",
+            "start": 82,
+            "end": 94
+          },
+          {
+            "entity": "att_name",
+            "value": "num-of-people",
+            "start": 99,
+            "end": 112
+          },
+          {
+            "entity": "sym_value",
+            "value": "5",
+            "start": 114,
+            "end": 115
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 116,
+            "end": 120
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 128,
+            "end": 130
+          },
+          {
+            "entity": "method",
+            "value": "valid",
+            "start": 131,
+            "end": 136
+          }
+        ]
+      },
+      {
+        "text": "given a ring When the method join is called with 'a' and 'tt' Then should return 'a,d,e,f,g'",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "ring",
+            "start": 8,
+            "end": 12
+          },
+          {
+            "entity": "method",
+            "value": "join",
+            "start": 29,
+            "end": 33
+          },
+          {
+            "entity": "expected_value",
+            "value": "'a,d,e,f,g'",
+            "start": 81,
+            "end": 92
+          },
+          {
+            "entity": "sym_value",
+            "value": "'a'",
+            "start": 49,
+            "end": 52
+          },
+          {
+            "entity": "sym_value",
+            "value": "'tt'",
+            "start": 57,
+            "end": 61
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 74,
+            "end": 80
+          },
+          {
+            "start": 13,
+            "end": 17,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 62,
+            "end": 66,
+            "value": "Then",
+            "entity": "then"
+          }
+        ]
+      },
+      {
+        "text": "Given a house When is saved with area, rooms, washroom Then should be valid",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "house",
+            "start": 8,
+            "end": 13
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 14,
+            "end": 18
+          },
+          {
+            "entity": "att_name",
+            "value": "area",
+            "start": 33,
+            "end": 37
+          },
+          {
+            "entity": "att_name",
+            "value": "rooms",
+            "start": 39,
+            "end": 44
+          },
+          {
+            "entity": "att_name",
+            "value": "washroom",
+            "start": 46,
+            "end": 54
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 55,
+            "end": 59
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 67,
+            "end": 69
+          },
+          {
+            "entity": "method",
+            "value": "valid",
+            "start": 70,
+            "end": 75
+          },
+          {
+            "start": 19,
+            "end": 27,
+            "value": "is saved",
+            "entity": "method"
+          }
+        ]
+      },
+      {
+        "text": "Given a project When is created with attributes name: 'p1', num-of-tasks: 2   Then should be valid",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "project",
+            "start": 8,
+            "end": 15
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 16,
+            "end": 20
+          },
+          {
+            "entity": "att_name",
+            "value": "name",
+            "start": 48,
+            "end": 52
+          },
+          {
+            "entity": "sym_value",
+            "value": "'p1'",
+            "start": 54,
+            "end": 58
+          },
+          {
+            "entity": "att_name",
+            "value": "num-of-tasks",
+            "start": 60,
+            "end": 72
+          },
+          {
+            "entity": "sym_value",
+            "value": "2",
+            "start": 74,
+            "end": 75
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 78,
+            "end": 82
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 90,
+            "end": 92
+          },
+          {
+            "entity": "method",
+            "value": "valid",
+            "start": 93,
+            "end": 98
+          },
+          {
+            "start": 21,
+            "end": 31,
+            "value": "is created",
+            "entity": "method"
+          }
+        ]
+      },
+      {
+        "text": "given a ring when the method join with 'a' and 'b' is called then  should return 'a,b'",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "ring",
+            "start": 8,
+            "end": 12
+          },
+          {
+            "entity": "method",
+            "value": "join",
+            "start": 29,
+            "end": 33
+          },
+          {
+            "entity": "expected_value",
+            "value": "'a,b'",
+            "start": 81,
+            "end": 86
+          },
+          {
+            "entity": "sym_value",
+            "value": "'a'",
+            "start": 39,
+            "end": 42
+          },
+          {
+            "entity": "sym_value",
+            "value": "'b'",
+            "start": 47,
+            "end": 50
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 74,
+            "end": 80
+          },
+          {
+            "start": 13,
+            "end": 17,
+            "value": "when",
+            "entity": "when"
+          },
+          {
+            "start": 61,
+            "end": 65,
+            "value": "then",
+            "entity": "then"
+          }
+        ]
+      },
+      {
+        "text": "Given a user When I initialize with name: 'David', age: 20 and last-name: 'CCC' Then should be valid",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 8,
+            "end": 12
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 13,
+            "end": 17
+          },
+          {
+            "entity": "method",
+            "value": "initialize",
+            "start": 20,
+            "end": 30
+          },
+          {
+            "entity": "att_name",
+            "value": "name",
+            "start": 36,
+            "end": 40
+          },
+          {
+            "entity": "sym_value",
+            "value": "'David'",
+            "start": 42,
+            "end": 49
+          },
+          {
+            "entity": "att_name",
+            "value": "age",
+            "start": 51,
+            "end": 54
+          },
+          {
+            "entity": "sym_value",
+            "value": "20",
+            "start": 56,
+            "end": 58
+          },
+          {
+            "entity": "att_name",
+            "value": "last-name",
+            "start": 63,
+            "end": 72
+          },
+          {
+            "entity": "sym_value",
+            "value": "'CCC'",
+            "start": 74,
+            "end": 79
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 80,
+            "end": 84
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 92,
+            "end": 94
+          },
+          {
+            "entity": "method",
+            "value": "valid",
+            "start": 95,
+            "end": 100
+          }
+        ]
+      },
+      {
+        "text": "Given a calculator When I call subtract with 10 and 5 Then I expect 5",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "calculator",
+            "start": 8,
+            "end": 18
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 19,
+            "end": 23
+          },
+          {
+            "entity": "method",
+            "value": "subtract",
+            "start": 31,
+            "end": 39
+          },
+          {
+            "entity": "sym_value",
+            "value": "10",
+            "start": 45,
+            "end": 47
+          },
+          {
+            "entity": "sym_value",
+            "value": "5",
+            "start": 52,
+            "end": 53
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 54,
+            "end": 58
+          },
+          {
+            "start": 68,
+            "end": 69,
+            "value": "5",
+            "entity": "expected_value"
+          }
+        ]
+      },
+      {
+        "text": "Given a bank-account When is created with holder, expiration_date, balannce and cvv Then should be valid",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "bank-account",
+            "start": 8,
+            "end": 20
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 21,
+            "end": 25
+          },
+          {
+            "entity": "att_name",
+            "value": "holder",
+            "start": 42,
+            "end": 48
+          },
+          {
+            "entity": "att_name",
+            "value": "expiration_date",
+            "start": 50,
+            "end": 65
+          },
+          {
+            "entity": "att_name",
+            "value": "balannce",
+            "start": 67,
+            "end": 75
+          },
+          {
+            "entity": "att_name",
+            "value": "cvv",
+            "start": 80,
+            "end": 83
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 84,
+            "end": 88
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 96,
+            "end": 98
+          },
+          {
+            "entity": "method",
+            "value": "valid",
+            "start": 99,
+            "end": 104
+          },
+          {
+            "start": 26,
+            "end": 36,
+            "value": "is created",
+            "entity": "method"
+          }
+        ]
+      },
+      {
+        "text": "Given an user When I call the method fullname with parameters 'pol', 'jil', 'mir' Then should return 'pol jil mir'",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 9,
+            "end": 13
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 14,
+            "end": 18
+          },
+          {
+            "entity": "method",
+            "value": "fullname",
+            "start": 37,
+            "end": 45
+          },
+          {
+            "entity": "sym_value",
+            "value": "'pol'",
+            "start": 62,
+            "end": 67
+          },
+          {
+            "entity": "sym_value",
+            "value": "'jil'",
+            "start": 69,
+            "end": 74
+          },
+          {
+            "entity": "sym_value",
+            "value": "'mir'",
+            "start": 76,
+            "end": 81
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 82,
+            "end": 86
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 94,
+            "end": 100
+          },
+          {
+            "entity": "expected_value",
+            "value": "'pol jil mir'",
+            "start": 101,
+            "end": 114
+          }
+        ]
+      },
+      {
+        "text": "Given a company c and a operator o When c is approved by o and I call approved-companies Then c should be included",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "company",
+            "entity": "model_name"
+          },
+          {
+            "start": 16,
+            "end": 17,
+            "value": "c",
+            "entity": "instance_name"
+          },
+          {
+            "start": 24,
+            "end": 32,
+            "value": "operator",
+            "entity": "model_name"
+          },
+          {
+            "start": 33,
+            "end": 34,
+            "value": "o",
+            "entity": "instance_name"
+          },
+          {
+            "start": 40,
+            "end": 41,
+            "value": "c",
+            "entity": "sym_value"
+          },
+          {
+            "start": 57,
+            "end": 58,
+            "value": "o",
+            "entity": "instance_name"
+          },
+          {
+            "start": 70,
+            "end": 88,
+            "value": "approved-companies",
+            "entity": "method_name"
+          },
+          {
+            "start": 94,
+            "end": 95,
+            "value": "c",
+            "entity": "expected_value"
+          },
+          {
+            "start": 106,
+            "end": 114,
+            "value": "included",
+            "entity": "op"
+          },
+          {
+            "start": 35,
+            "end": 39,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 89,
+            "end": 93,
+            "value": "Then",
+            "entity": "then"
+          },
+          {
+            "start": 42,
+            "end": 53,
+            "value": "is approved",
+            "entity": "method"
+          }
+        ]
+      },
+      {
+        "text": "I want to describe a validation for user model",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 36,
+            "end": 40
+          }
+        ]
+      },
+      {
+        "text": "Given a invoice i1 And a provider p1 When i1 is associated with p1 And I call method invoices with p1 Then i1 should be included",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "invoice",
+            "start": 8,
+            "end": 15
+          },
+          {
+            "entity": "instance_name",
+            "value": "i1",
+            "start": 16,
+            "end": 18
+          },
+          {
+            "entity": "model_name",
+            "value": "provider",
+            "start": 25,
+            "end": 33
+          },
+          {
+            "entity": "instance_name",
+            "value": "p1",
+            "start": 34,
+            "end": 36
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 37,
+            "end": 41
+          },
+          {
+            "entity": "method_name",
+            "value": "invoices",
+            "start": 85,
+            "end": 93
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 102,
+            "end": 106
+          },
+          {
+            "entity": "op",
+            "value": "included",
+            "start": 120,
+            "end": 128
+          },
+          {
+            "start": 42,
+            "end": 44,
+            "value": "i1",
+            "entity": "sym_value"
+          },
+          {
+            "start": 64,
+            "end": 66,
+            "value": "p1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 99,
+            "end": 101,
+            "value": "p1",
+            "entity": "sym_value"
+          },
+          {
+            "start": 107,
+            "end": 109,
+            "value": "i1",
+            "entity": "expected_value"
+          },
+          {
+            "start": 45,
+            "end": 58,
+            "value": "is associated",
+            "entity": "method"
+          }
+        ]
+      },
+      {
+        "text": "Given a document d And revisor r When I link d to r And I call revisor-of with d Then r should be returned",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "start": 98,
+            "end": 106,
+            "value": "returned",
+            "entity": "op"
+          },
+          {
+            "start": 63,
+            "end": 73,
+            "value": "revisor-of",
+            "entity": "method_name"
+          },
+          {
+            "start": 31,
+            "end": 32,
+            "value": "r",
+            "entity": "instance_name"
+          },
+          {
+            "start": 23,
+            "end": 30,
+            "value": "revisor",
+            "entity": "model_name"
+          },
+          {
+            "start": 8,
+            "end": 16,
+            "value": "document",
+            "entity": "model_name"
+          },
+          {
+            "start": 33,
+            "end": 37,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 81,
+            "end": 85,
+            "value": "Then",
+            "entity": "then"
+          },
+          {
+            "start": 50,
+            "end": 51,
+            "value": "r",
+            "entity": "sym_value"
+          },
+          {
+            "start": 40,
+            "end": 44,
+            "value": "link",
+            "entity": "method"
+          },
+          {
+            "start": 79,
+            "end": 80,
+            "value": "d",
+            "entity": "sym_value"
+          },
+          {
+            "start": 86,
+            "end": 87,
+            "value": "r",
+            "entity": "expected_value"
+          },
+          {
+            "start": 17,
+            "end": 18,
+            "value": "d",
+            "entity": "instance_name"
+          },
+          {
+            "start": 45,
+            "end": 46,
+            "value": "d",
+            "entity": "instance_name"
+          }
+        ]
+      },
+      {
+        "text": "given a bank-account When I instantiate holder, expiration-date and cvv Then should be valid",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "bank-account",
+            "start": 8,
+            "end": 20
+          },
+          {
+            "entity": "att_name",
+            "value": "holder",
+            "start": 40,
+            "end": 46
+          },
+          {
+            "entity": "att_name",
+            "value": "expiration-date",
+            "start": 48,
+            "end": 63
+          },
+          {
+            "entity": "att_name",
+            "value": "cvv",
+            "start": 68,
+            "end": 71
+          },
+          {
+            "entity": "method",
+            "value": "valid",
+            "start": 87,
+            "end": 92
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 84,
+            "end": 86
+          },
+          {
+            "entity": "method",
+            "value": "instantiate",
+            "start": 28,
+            "end": 39
+          },
+          {
+            "start": 21,
+            "end": 25,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 72,
+            "end": 76,
+            "value": "Then",
+            "entity": "then"
+          }
+        ]
+      },
+      {
+        "text": "Given a bank-account When is created with holder: 'Anna', expiration_date: '10/10/2020', balannce: 0 and cvv: 999 Then should be valid",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "bank-account",
+            "start": 8,
+            "end": 20
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 21,
+            "end": 25
+          },
+          {
+            "entity": "att_name",
+            "value": "holder",
+            "start": 42,
+            "end": 48
+          },
+          {
+            "entity": "sym_value",
+            "value": "'Anna'",
+            "start": 50,
+            "end": 56
+          },
+          {
+            "entity": "att_name",
+            "value": "expiration_date",
+            "start": 58,
+            "end": 73
+          },
+          {
+            "entity": "sym_value",
+            "value": "'10/10/2020'",
+            "start": 75,
+            "end": 87
+          },
+          {
+            "entity": "att_name",
+            "value": "balannce",
+            "start": 89,
+            "end": 97
+          },
+          {
+            "entity": "att_name",
+            "value": "cvv",
+            "start": 105,
+            "end": 108
+          },
+          {
+            "entity": "sym_value",
+            "value": "999",
+            "start": 110,
+            "end": 113
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 114,
+            "end": 118
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 126,
+            "end": 128
+          },
+          {
+            "entity": "method",
+            "value": "valid",
+            "start": 129,
+            "end": 134
+          },
+          {
+            "start": 26,
+            "end": 36,
+            "value": "is created",
+            "entity": "method"
+          },
+          {
+            "start": 99,
+            "end": 100,
+            "value": "0",
+            "entity": "sym_value"
+          }
+        ]
+      },
+      {
+        "text": "given a ring When I call join with 't1' and '2' Then should return 'a,b'",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "ring",
+            "start": 8,
+            "end": 12
+          },
+          {
+            "entity": "method",
+            "value": "join",
+            "start": 25,
+            "end": 29
+          },
+          {
+            "entity": "expected_value",
+            "value": "'a,b'",
+            "start": 67,
+            "end": 72
+          },
+          {
+            "entity": "sym_value",
+            "value": "'t1'",
+            "start": 35,
+            "end": 39
+          },
+          {
+            "entity": "sym_value",
+            "value": "'2'",
+            "start": 44,
+            "end": 47
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 60,
+            "end": 66
+          },
+          {
+            "start": 13,
+            "end": 17,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 48,
+            "end": 52,
+            "value": "Then",
+            "entity": "then"
+          }
+        ]
+      },
+      {
+        "text": "I want to describe a service",
+        "intent": "SERVICE_TEST",
+        "entities": []
+      }
+    ],
+    "regex_features": [],
+    "entity_synonyms": [
+      {
+        "value": "last-name",
+        "synonyms": [
+          "last name",
+          "last_name",
+          "lastname"
+        ]
+      },
+      {
+        "value": " bank-account",
+        "synonyms": [
+          "bank account",
+          "bank_account",
+          "bankaccount"
+        ]
+      }
+    ]
+  }
+}

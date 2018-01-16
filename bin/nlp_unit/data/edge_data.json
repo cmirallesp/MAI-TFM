@@ -1,0 +1,1069 @@
+﻿{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "Given a project When I instantiate with name: 'prj1', num-of-tasks: 3, deadline: '01/01/2017', priority: 0 and num-of-people: 5 Then should be valid",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "project",
+            "entity": "model_name"
+          },
+          {
+            "start": 40,
+            "end": 44,
+            "value": "name",
+            "entity": "att_name"
+          },
+          {
+            "start": 46,
+            "end": 52,
+            "value": "'prj1'",
+            "entity": "sym_value"
+          },
+          {
+            "start": 54,
+            "end": 66,
+            "value": "num-of-tasks",
+            "entity": "att_name"
+          },
+          {
+            "start": 68,
+            "end": 69,
+            "value": "3",
+            "entity": "sym_value"
+          },
+          {
+            "start": 71,
+            "end": 79,
+            "value": "deadline",
+            "entity": "att_name"
+          },
+          {
+            "start": 81,
+            "end": 93,
+            "value": "'01/01/2017'",
+            "entity": "sym_value"
+          },
+          {
+            "start": 95,
+            "end": 103,
+            "value": "priority",
+            "entity": "att_name"
+          },
+          {
+            "start": 105,
+            "end": 106,
+            "value": "0",
+            "entity": "sym_value"
+          },
+          {
+            "start": 111,
+            "end": 124,
+            "value": "num-of-people",
+            "entity": "att_name"
+          },
+          {
+            "start": 126,
+            "end": 127,
+            "value": "5",
+            "entity": "sym_value"
+          },
+          {
+            "start": 143,
+            "end": 148,
+            "value": "valid",
+            "entity": "method"
+          },
+          {
+            "start": 140,
+            "end": 142,
+            "value": "be",
+            "entity": "op"
+          },
+          {
+            "start": 16,
+            "end": 20,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 128,
+            "end": 132,
+            "value": "Then",
+            "entity": "then"
+          },
+          {
+            "start": 23,
+            "end": 34,
+            "value": "instantiate",
+            "entity": "method"
+          }
+        ]
+      },
+      {
+        "text": "Given a building When is created with floors: 30 , flats: 10, long: '100ft',  elevators: 4, concierges: 5, parking: 500 and date-of-construction: '1/1/2012' Then should be valid",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "start": 8,
+            "end": 16,
+            "value": "building",
+            "entity": "model_name"
+          },
+          {
+            "start": 38,
+            "end": 44,
+            "value": "floors",
+            "entity": "att_name"
+          },
+          {
+            "start": 51,
+            "end": 56,
+            "value": "flats",
+            "entity": "att_name"
+          },
+          {
+            "start": 58,
+            "end": 60,
+            "value": "10",
+            "entity": "sym_value"
+          },
+          {
+            "start": 62,
+            "end": 66,
+            "value": "long",
+            "entity": "att_name"
+          },
+          {
+            "start": 68,
+            "end": 75,
+            "value": "'100ft'",
+            "entity": "sym_value"
+          },
+          {
+            "start": 78,
+            "end": 87,
+            "value": "elevators",
+            "entity": "att_name"
+          },
+          {
+            "start": 89,
+            "end": 90,
+            "value": "4",
+            "entity": "sym_value"
+          },
+          {
+            "start": 92,
+            "end": 102,
+            "value": "concierges",
+            "entity": "att_name"
+          },
+          {
+            "start": 104,
+            "end": 105,
+            "value": "5",
+            "entity": "sym_value"
+          },
+          {
+            "start": 107,
+            "end": 114,
+            "value": "parking",
+            "entity": "att_name"
+          },
+          {
+            "start": 124,
+            "end": 144,
+            "value": "date-of-construction",
+            "entity": "att_name"
+          },
+          {
+            "start": 146,
+            "end": 156,
+            "value": "'1/1/2012'",
+            "entity": "sym_value"
+          },
+          {
+            "start": 17,
+            "end": 21,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 157,
+            "end": 161,
+            "value": "Then",
+            "entity": "then"
+          },
+          {
+            "start": 116,
+            "end": 119,
+            "value": "500",
+            "entity": "sym_value"
+          },
+          {
+            "start": 169,
+            "end": 171,
+            "value": "be",
+            "entity": "op"
+          },
+          {
+            "start": 172,
+            "end": 177,
+            "value": "valid",
+            "entity": "method"
+          },
+          {
+            "start": 22,
+            "end": 32,
+            "value": "is created",
+            "entity": "method"
+          },
+          {
+            "start": 46,
+            "end": 48,
+            "value": "30",
+            "entity": "sym_value"
+          }
+        ]
+      },
+      {
+        "text": "Given a building b and person p When b is created with floors: 30 , flats: 10 and p lives b and I call people with b Then p should be returned",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "start": 8,
+            "end": 16,
+            "value": "building",
+            "entity": "model_name"
+          },
+          {
+            "start": 17,
+            "end": 18,
+            "value": "b",
+            "entity": "instance_name"
+          },
+          {
+            "start": 23,
+            "end": 29,
+            "value": "person",
+            "entity": "model_name"
+          },
+          {
+            "start": 30,
+            "end": 31,
+            "value": "p",
+            "entity": "instance_name"
+          },
+          {
+            "start": 37,
+            "end": 38,
+            "value": "b",
+            "entity": "instance_name"
+          },
+          {
+            "start": 39,
+            "end": 49,
+            "value": "is created",
+            "entity": "method"
+          },
+          {
+            "start": 55,
+            "end": 61,
+            "value": "floors",
+            "entity": "att_name"
+          },
+          {
+            "start": 63,
+            "end": 65,
+            "value": "30",
+            "entity": "sym_value"
+          },
+          {
+            "start": 68,
+            "end": 73,
+            "value": "flats",
+            "entity": "att_name"
+          },
+          {
+            "start": 75,
+            "end": 77,
+            "value": "10",
+            "entity": "sym_value"
+          },
+          {
+            "start": 103,
+            "end": 109,
+            "value": "people",
+            "entity": "service_name"
+          },
+          {
+            "start": 134,
+            "end": 142,
+            "value": "returned",
+            "entity": "op"
+          },
+          {
+            "start": 82,
+            "end": 83,
+            "value": "p",
+            "entity": "instance_name"
+          },
+          {
+            "start": 90,
+            "end": 91,
+            "value": "b",
+            "entity": "sym_value"
+          },
+          {
+            "start": 115,
+            "end": 116,
+            "value": "b",
+            "entity": "sym_value"
+          },
+          {
+            "start": 122,
+            "end": 123,
+            "value": "p",
+            "entity": "expected_value"
+          },
+          {
+            "start": 84,
+            "end": 89,
+            "value": "lives",
+            "entity": "method"
+          }
+        ]
+      },
+      {
+        "text": "Given an animal a1 and an animal a2 and an animal an3 When a1 links to a2 and a1 links to a3 and I call family with a1 then I expect to get 'a2,a3'",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "animal",
+            "entity": "model_name"
+          },
+          {
+            "start": 16,
+            "end": 18,
+            "value": "a1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 26,
+            "end": 32,
+            "value": "animal",
+            "entity": "model_name"
+          },
+          {
+            "start": 33,
+            "end": 35,
+            "value": "a2",
+            "entity": "instance_name"
+          },
+          {
+            "start": 50,
+            "end": 53,
+            "value": "an3",
+            "entity": "instance_name"
+          },
+          {
+            "start": 43,
+            "end": 49,
+            "value": "animal",
+            "entity": "model_name"
+          },
+          {
+            "start": 59,
+            "end": 61,
+            "value": "a1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 62,
+            "end": 70,
+            "value": "links to",
+            "entity": "method"
+          },
+          {
+            "start": 71,
+            "end": 73,
+            "value": "a2",
+            "entity": "sym_value"
+          },
+          {
+            "start": 78,
+            "end": 80,
+            "value": "a1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 81,
+            "end": 89,
+            "value": "links to",
+            "entity": "method"
+          },
+          {
+            "start": 90,
+            "end": 92,
+            "value": "a3",
+            "entity": "sym_value"
+          },
+          {
+            "start": 116,
+            "end": 118,
+            "value": "a1",
+            "entity": "sym_value"
+          },
+          {
+            "start": 104,
+            "end": 110,
+            "value": "family",
+            "entity": "service_name"
+          },
+          {
+            "start": 140,
+            "end": 147,
+            "value": "'a2,a3'",
+            "entity": "expected_value"
+          },
+          {
+            "start": 136,
+            "end": 139,
+            "value": "get",
+            "entity": "op"
+          }
+        ]
+      },
+      {
+        "text": "Given an animal a1 and an animal a2 and an animal an3 When a1 is linked to a2 and a1 links to a3 and a1 is-type-of a2 I call family-and-type with a1, 2 and 4 then I expect to get 'a2'",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "animal",
+            "entity": "model_name"
+          },
+          {
+            "start": 16,
+            "end": 18,
+            "value": "a1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 26,
+            "end": 32,
+            "value": "animal",
+            "entity": "model_name"
+          },
+          {
+            "start": 33,
+            "end": 35,
+            "value": "a2",
+            "entity": "instance_name"
+          },
+          {
+            "start": 43,
+            "end": 49,
+            "value": "animal",
+            "entity": "model_name"
+          },
+          {
+            "start": 50,
+            "end": 53,
+            "value": "an3",
+            "entity": "instance_name"
+          },
+          {
+            "start": 59,
+            "end": 61,
+            "value": "a1",
+            "entity": "sym_value"
+          },
+          {
+            "start": 75,
+            "end": 77,
+            "value": "a2",
+            "entity": "instance_name"
+          },
+          {
+            "start": 82,
+            "end": 84,
+            "value": "a1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 62,
+            "end": 71,
+            "value": "is linked",
+            "entity": "method"
+          },
+          {
+            "start": 85,
+            "end": 93,
+            "value": "links to",
+            "entity": "method"
+          },
+          {
+            "start": 94,
+            "end": 96,
+            "value": "a3",
+            "entity": "sym_value"
+          },
+          {
+            "start": 101,
+            "end": 103,
+            "value": "a1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 104,
+            "end": 114,
+            "value": "is-type-of",
+            "entity": "method"
+          },
+          {
+            "start": 115,
+            "end": 117,
+            "value": "a2",
+            "entity": "sym_value"
+          },
+          {
+            "start": 125,
+            "end": 140,
+            "value": "family-and-type",
+            "entity": "service_name"
+          },
+          {
+            "start": 146,
+            "end": 148,
+            "value": "a1",
+            "entity": "sym_value"
+          },
+          {
+            "start": 156,
+            "end": 157,
+            "value": "4",
+            "entity": "sym_value"
+          },
+          {
+            "start": 150,
+            "end": 151,
+            "value": "2",
+            "entity": "sym_value"
+          },
+          {
+            "start": 175,
+            "end": 178,
+            "value": "get",
+            "entity": "op"
+          },
+          {
+            "start": 179,
+            "end": 183,
+            "value": "'a2'",
+            "entity": "expected_value"
+          }
+        ]
+      },
+      {
+        "text": "Given an animal a1 and an animal a2 and an animal an3 When a1 is linked to a2 and a1 links to a3 and a1 is-type-of a2 I call familyandtype with a1, 2 and 4 then I expect to get 'a2'",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "animal",
+            "entity": "model_name"
+          },
+          {
+            "start": 16,
+            "end": 18,
+            "value": "a1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 26,
+            "end": 32,
+            "value": "animal",
+            "entity": "model_name"
+          },
+          {
+            "start": 33,
+            "end": 35,
+            "value": "a2",
+            "entity": "instance_name"
+          },
+          {
+            "start": 43,
+            "end": 49,
+            "value": "animal",
+            "entity": "model_name"
+          },
+          {
+            "start": 50,
+            "end": 53,
+            "value": "an3",
+            "entity": "instance_name"
+          },
+          {
+            "start": 59,
+            "end": 61,
+            "value": "a1",
+            "entity": "sym_value"
+          },
+          {
+            "start": 75,
+            "end": 77,
+            "value": "a2",
+            "entity": "instance_name"
+          },
+          {
+            "start": 82,
+            "end": 84,
+            "value": "a1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 62,
+            "end": 71,
+            "value": "is linked",
+            "entity": "method"
+          },
+          {
+            "start": 85,
+            "end": 93,
+            "value": "links to",
+            "entity": "method"
+          },
+          {
+            "start": 94,
+            "end": 96,
+            "value": "a3",
+            "entity": "sym_value"
+          },
+          {
+            "start": 101,
+            "end": 103,
+            "value": "a1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 104,
+            "end": 114,
+            "value": "is-type-of",
+            "entity": "method"
+          },
+          {
+            "start": 115,
+            "end": 117,
+            "value": "a2",
+            "entity": "sym_value"
+          },
+          {
+            "start": 144,
+            "end": 146,
+            "value": "a1",
+            "entity": "sym_value"
+          },
+          {
+            "start": 154,
+            "end": 155,
+            "value": "4",
+            "entity": "sym_value"
+          },
+          {
+            "start": 148,
+            "end": 149,
+            "value": "2",
+            "entity": "sym_value"
+          },
+          {
+            "start": 173,
+            "end": 176,
+            "value": "get",
+            "entity": "op"
+          },
+          {
+            "start": 177,
+            "end": 181,
+            "value": "'a2'",
+            "entity": "expected_value"
+          },
+          {
+            "start": 125,
+            "end": 138,
+            "value": "familyandtype",
+            "entity": "service_name"
+          }
+        ]
+      },
+      {
+        "text": "Given an animal a1 and an animal a2 and an animal an3 When a1 is linked to a2 and a1 links to a3 and I call m2 with a1, 2 and 4 then I expect to get 'a2'",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "animal",
+            "entity": "model_name"
+          },
+          {
+            "start": 16,
+            "end": 18,
+            "value": "a1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 26,
+            "end": 32,
+            "value": "animal",
+            "entity": "model_name"
+          },
+          {
+            "start": 33,
+            "end": 35,
+            "value": "a2",
+            "entity": "instance_name"
+          },
+          {
+            "start": 43,
+            "end": 49,
+            "value": "animal",
+            "entity": "model_name"
+          },
+          {
+            "start": 50,
+            "end": 53,
+            "value": "an3",
+            "entity": "instance_name"
+          },
+          {
+            "start": 59,
+            "end": 61,
+            "value": "a1",
+            "entity": "sym_value"
+          },
+          {
+            "start": 75,
+            "end": 77,
+            "value": "a2",
+            "entity": "instance_name"
+          },
+          {
+            "start": 82,
+            "end": 84,
+            "value": "a1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 62,
+            "end": 71,
+            "value": "is linked",
+            "entity": "method"
+          },
+          {
+            "start": 85,
+            "end": 93,
+            "value": "links to",
+            "entity": "method"
+          },
+          {
+            "start": 94,
+            "end": 96,
+            "value": "a3",
+            "entity": "sym_value"
+          },
+          {
+            "start": 82,
+            "end": 84,
+            "value": "a1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 75,
+            "end": 77,
+            "value": "a2",
+            "entity": "sym_value"
+          },
+          {
+            "start": 116,
+            "end": 118,
+            "value": "a1",
+            "entity": "sym_value"
+          },
+          {
+            "start": 126,
+            "end": 127,
+            "value": "4",
+            "entity": "sym_value"
+          },
+          {
+            "start": 120,
+            "end": 121,
+            "value": "2",
+            "entity": "sym_value"
+          },
+          {
+            "start": 145,
+            "end": 148,
+            "value": "get",
+            "entity": "op"
+          },
+          {
+            "start": 149,
+            "end": 153,
+            "value": "'a2'",
+            "entity": "expected_value"
+          },
+          {
+            "start": 108,
+            "end": 110,
+            "value": "m2",
+            "entity": "service_name"
+          }
+        ]
+      },
+      {
+        "text": "Given an event a1 and an artist a2  When a1 is linked to a2 and a2 links to a1 and a1 is-type-of a2 I call m1 with a1, 2 and 4 then I expect to get 'a2'",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "start": 15,
+            "end": 17,
+            "value": "a1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 32,
+            "end": 34,
+            "value": "a2",
+            "entity": "instance_name"
+          },
+          {
+            "start": 41,
+            "end": 43,
+            "value": "a1",
+            "entity": "sym_value"
+          },
+          {
+            "start": 57,
+            "end": 59,
+            "value": "a2",
+            "entity": "instance_name"
+          },
+          {
+            "start": 44,
+            "end": 53,
+            "value": "is linked",
+            "entity": "method"
+          },
+          {
+            "start": 67,
+            "end": 75,
+            "value": "links to",
+            "entity": "method"
+          },
+          {
+            "start": 83,
+            "end": 85,
+            "value": "a1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 86,
+            "end": 96,
+            "value": "is-type-of",
+            "entity": "method"
+          },
+          {
+            "start": 97,
+            "end": 99,
+            "value": "a2",
+            "entity": "sym_value"
+          },
+          {
+            "start": 115,
+            "end": 117,
+            "value": "a1",
+            "entity": "sym_value"
+          },
+          {
+            "start": 125,
+            "end": 126,
+            "value": "4",
+            "entity": "sym_value"
+          },
+          {
+            "start": 119,
+            "end": 120,
+            "value": "2",
+            "entity": "sym_value"
+          },
+          {
+            "start": 144,
+            "end": 147,
+            "value": "get",
+            "entity": "op"
+          },
+          {
+            "start": 148,
+            "end": 152,
+            "value": "'a2'",
+            "entity": "expected_value"
+          },
+          {
+            "start": 64,
+            "end": 66,
+            "value": "a2",
+            "entity": "instance_name"
+          },
+          {
+            "start": 76,
+            "end": 78,
+            "value": "a1",
+            "entity": "sym_value"
+          },
+          {
+            "start": 107,
+            "end": 109,
+            "value": "m1",
+            "entity": "service_name"
+          }
+        ]
+      },
+      {
+        "text": "Given a building b and person p When b is created with floors: 30 , flats: 10 and p links to b and I call people with b Then p should be returned",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "start": 8,
+            "end": 16,
+            "value": "building",
+            "entity": "model_name"
+          },
+          {
+            "start": 17,
+            "end": 18,
+            "value": "b",
+            "entity": "instance_name"
+          },
+          {
+            "start": 23,
+            "end": 29,
+            "value": "person",
+            "entity": "model_name"
+          },
+          {
+            "start": 30,
+            "end": 31,
+            "value": "p",
+            "entity": "instance_name"
+          },
+          {
+            "start": 37,
+            "end": 38,
+            "value": "b",
+            "entity": "instance_name"
+          },
+          {
+            "start": 39,
+            "end": 49,
+            "value": "is created",
+            "entity": "method"
+          },
+          {
+            "start": 55,
+            "end": 61,
+            "value": "floors",
+            "entity": "att_name"
+          },
+          {
+            "start": 63,
+            "end": 65,
+            "value": "30",
+            "entity": "sym_value"
+          },
+          {
+            "start": 68,
+            "end": 73,
+            "value": "flats",
+            "entity": "att_name"
+          },
+          {
+            "start": 75,
+            "end": 77,
+            "value": "10",
+            "entity": "sym_value"
+          },
+          {
+            "start": 106,
+            "end": 112,
+            "value": "people",
+            "entity": "service_name"
+          },
+          {
+            "start": 137,
+            "end": 145,
+            "value": "returned",
+            "entity": "op"
+          },
+          {
+            "start": 82,
+            "end": 83,
+            "value": "p",
+            "entity": "instance_name"
+          },
+          {
+            "start": 93,
+            "end": 94,
+            "value": "b",
+            "entity": "sym_value"
+          },
+          {
+            "start": 118,
+            "end": 119,
+            "value": "b",
+            "entity": "sym_value"
+          },
+          {
+            "start": 125,
+            "end": 126,
+            "value": "p",
+            "entity": "expected_value"
+          },
+          {
+            "start": 84,
+            "end": 92,
+            "value": "links to",
+            "entity": "method"
+          }
+        ]
+      }
+    ],
+    "regex_features": [],
+    "entity_synonyms": [
+      {
+        "value": "last-name",
+        "synonyms": [
+          "last name",
+          "last_name",
+          "lastname"
+        ]
+      },
+      {
+        "value": " bank-account",
+        "synonyms": [
+          "bank account",
+          "bank_account",
+          "bankaccount"
+        ]
+      }
+    ]
+  }
+}

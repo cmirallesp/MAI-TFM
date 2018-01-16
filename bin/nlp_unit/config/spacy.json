@@ -1,0 +1,5 @@
+{
+"pipeline": "spacy_sklearn",
+"path" : "projects",
+"num_threads": 2
+}

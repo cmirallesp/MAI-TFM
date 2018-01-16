@@ -1,0 +1,7 @@
+.db
+node_modules
+components/routes/_*
+run_bot.sh
+.tern-port
+tags
+.data

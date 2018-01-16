@@ -1,0 +1,170 @@
+[
+    {
+        "command": "select_specification",
+        "description": "Script to select kind of specification",
+        "created": "2017-09-29T16:58:41.000Z",
+        "modified": "2017-10-30T14:28:45.000Z",
+        "script": [
+            {
+                "topic": "default",
+                "script": [
+                    {
+                        "text": [
+                            "Hey!",
+                            "Hey there!",
+                            "Howdy!",
+                            "G`day human!",
+                            "Salut!",
+                            "Hola!",
+                            "Hello Human!",
+                            "Nice to meet you Human.",
+                            "Hi!"
+                        ]
+                    },
+                    {
+                        "action": "offer_help"
+                    }
+                ]
+            },
+            {
+                "topic": "request_spec",
+                "script": [
+                    {
+                        "text": [
+                            "{{^vars.already_asked}} Sorry I can't understand your answer..{{/vars.already_asked}}"
+                        ],
+                        "meta": [],
+                        "collect": null,
+                        "attachments": [
+                            {
+                                "footer": "",
+                                "title": "pick one kind of specification:",
+                                "text": "",
+                                "fields": [],
+                                "actions": [
+                                    {
+                                        "text": "Model validation",
+                                        "name": "btn",
+                                        "value": "MODEL_VALIDATION",
+                                        "type": "button",
+                                        "style": "default"
+                                    },
+                                    {
+                                        "text": "Model method",
+                                        "name": "btn",
+                                        "value": "MODEL_METHOD_TEST",
+                                        "type": "button"
+                                    },
+                                    {
+                                        "text": "New functionality",
+                                        "name": "btn",
+                                        "value": "SERVICE_TEST",
+                                        "type": "button"
+                                    }
+                                ],
+                                "color": "#ff0000",
+                                "callback_id": "request_spec"
+                            }
+                        ]
+                    },
+                    {
+                        "action": "stop"
+                    }
+                ]
+            },
+            {
+                "topic": "offer_help",
+                "script": [
+                    {
+                        "text": [
+                            "{{#vars.error_msg}}\n(Something *wrong* has happened, please *try it again*. _Error: {{&vars.error_msg}}_ )\n{{/vars.error_msg}}"
+                        ]
+                    },
+                    {
+                        "text": [
+                            "What can I do for you?"
+                        ],
+                        "collect": {
+                            "key": "test_request",
+                            "options": [
+                                {
+                                    "default": true,
+                                    "pattern": "default",
+                                    "action": "next"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "action": "complete"
+                    }
+                ]
+            },
+            {
+                "topic": "end",
+                "script": [
+                    {
+                        "text": [
+                            "{{#vars.too_many_errors}}I couldn't do my because I've got too many errors :-(. Please try it latter or contact with technical people{{/vars.too_many_errors}}"
+                        ]
+                    },
+                    {
+                        "action": "complete"
+                    }
+                ]
+            },
+            {
+                "script": [
+                    {
+                        "text": [
+                            "Please select above one of the three options: *validate*, *method* or *functionality*"
+                        ]
+                    },
+                    {
+                        "action": "complete"
+                    }
+                ],
+                "topic": "from_fallback"
+            }
+        ],
+        "variables": [
+            {
+                "name": "test_request",
+                "type": "string",
+                "id": 262
+            },
+            {
+                "name": "temporary_value",
+                "type": "string",
+                "id": 448
+            }
+        ],
+        "triggers": [
+            {
+                "pattern": "Hello",
+                "type": "string",
+                "id": 7
+            },
+            {
+                "pattern": "hi",
+                "type": "string",
+                "id": 426
+            },
+            {
+                "pattern": "hello",
+                "type": "string",
+                "id": 23
+            },
+            {
+                "pattern": "Hi",
+                "type": "string",
+                "id": 375
+            },
+            {
+                "pattern": "Hey",
+                "type": "string",
+                "id": 179
+            }
+        ]
+    }
+]

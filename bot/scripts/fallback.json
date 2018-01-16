@@ -1,0 +1,20 @@
+[
+    {
+        "command": "fallback",
+        "description": "What the bot says if no other trigger matches",
+        "created": "2017-09-29T16:58:41.000Z",
+        "modified": "2017-09-29T16:58:41.000Z",
+        "script": [
+            {
+                "script": [
+                    {
+                        "action": "complete"
+                    }
+                ],
+                "topic": "default"
+            }
+        ],
+        "variables": [],
+        "triggers": []
+    }
+]

@@ -1,0 +1,10 @@
+logs/
+pip-selfcheck.json
+MITIE/
+slack-bot/
+nlp_unit/projects
+nlp_unit/model_mitie
+nlp_unit/model_spacy
+venv
+bin/nlp_unit/projects/default
+bin/nlp_unit/model_mitie

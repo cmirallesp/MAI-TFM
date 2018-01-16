@@ -1,0 +1,62 @@
+{
+  "name": "specsbot-slack",
+  "version": "0.0.2",
+  "description": "A bot for writing specifications",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "build": "babel es6/lib -d lib && babel es6/skills -d skills",
+    "prepublish": "npm run build",
+    "flow": "flow",
+    "test": "mocha lib --recursive"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "botkit": "^0.6",
+    "botkit-rasa": "^1.0.6",
+    "botkit-storage-mongo": "^1.0.6",
+    "dashbot": "0.7.4",
+    "debug": "^2.3.3",
+    "express": "^4.14.0",
+    "lodash": "^4.17.4",
+    "mongodb": "^2.2.33",
+    "node-env-file": "^0.1.8",
+    "pluralize": "^7.0.0",
+    "querystring": "^0.2.0",
+    "request": "^2.79.0",
+    "wordfilter": "^0.2.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "chai": "^4.1.2",
+    "eslint": "^4.11.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "flow-bin": "^0.58.0",
+    "javascript-state-machine": "^3.0.1",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/howdyai/botkit-starter-slack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/howdyai/botkit-starter-slack/issues"
+  },
+  "homepage": "https://github.com/howdyai/botkit-starter-slack",
+  "keywords": [
+    "bots",
+    "chatbots",
+    "slack"
+  ],
+  "author": "cmirallesp@gmail.com",
+  "license": "ISC"
+}

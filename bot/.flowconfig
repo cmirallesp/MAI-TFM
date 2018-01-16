@@ -1,0 +1,13 @@
+[ignore]
+
+[include]
+./lib_es6
+./skills
+
+[libs]
+
+[lints]
+
+[options]
+
+[strict]

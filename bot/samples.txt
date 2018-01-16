@@ -1,0 +1,4 @@
+I want to describe a method for user model
+I want to describe a method for user entity
+I want to describe a validation for user model
+I want to describe a method m1 for user entity

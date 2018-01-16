@@ -1,0 +1,6 @@
+{
+	"pipeline": "mitie",
+	"path" : "projects",
+	"num_threads": 2,
+	"mitie_file": "../MITIE/models/english/total_word_feature_extractor.dat"
+}

@@ -1,0 +1,19 @@
+// {type:class}
+// {direction:topDown}
+[note: You can stick notes on diagrams too!{bg:cornsilk}]
+// [Customer]<>1-orders 0..*>[Order]
+// [Order]++*-*>[LineItem]
+// [Order]-1>[DeliveryMethod]
+// [Order]*-*>[Product|EAN_Code|promo_price()]
+// [Category]<->[Product]
+// [DeliveryMethod]^[National]
+// [DeliveryMethod]^[International]
+
+[Expectation]->model[Instance]
+[Expectation]->expected [Symbol]
+[Instance]++1-attributes *[Symbol]
+
+[Klass]<>1-instances *[Instance]
+[Spec]++1-preconditions *[Instance]
+[Spec]++1-expectations *[Expectation]
+

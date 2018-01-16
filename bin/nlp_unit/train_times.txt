@@ -1,0 +1,7 @@
+[SPACY_SKLEARN]
+./projects/default/model_20171127-140427
+train.py data/train1.md ../config/spacy_train1.json  7,96s user 1,90s system 93% cpu 10,517 total
+
+[MITIE]
+./projects/default/model_20171127-150254
+python train.py data/train1.md ../config/mitie_train1.json  3446,29s user 113,09s system 100% cpu 59:16,28 total

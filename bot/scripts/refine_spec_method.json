@@ -1,0 +1,276 @@
+[
+    {
+        "command": "refine_spec_method",
+        "description": "specification of a method test",
+        "__v": 0,
+        "script": [
+            {
+                "script": [
+                    {
+                        "action": "ask_method_name"
+                    }
+                ],
+                "topic": "default"
+            },
+            {
+                "script": [
+                    {
+                        "text": [
+                            "What *method* do you want to test?"
+                        ],
+                        "collect": {
+                            "key": "method_name",
+                            "options": [
+                                {
+                                    "default": true,
+                                    "pattern": "default",
+                                    "action": "next"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "action": "ask_attributes"
+                    }
+                ],
+                "topic": "ask_method_name"
+            },
+            {
+                "script": [
+                    {
+                        "meta": [],
+                        "collect": {
+                            "options": [
+                                {
+                                    "action": "next",
+                                    "pattern": "default",
+                                    "default": true
+                                }
+                            ],
+                            "key": "attribute_names",
+                            "multiple": false
+                        },
+                        "text": [
+                            "I need to know *model state* before calling the method under the test.\nPlease provide me a *list of concerning attributes* (or *none*)"
+                        ]
+                    },
+                    {
+                        "action": "ask_values"
+                    }
+                ],
+                "topic": "ask_attributes"
+            },
+            {
+                "script": [
+                    {
+                        "text": [
+                            "Please provide me a value for *{{vars.attribute}}*"
+                        ],
+                        "collect": {
+                            "key": "attribute_value",
+                            "options": [
+                                {
+                                    "default": true,
+                                    "pattern": "default",
+                                    "action": "next"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "action": "complete"
+                    }
+                ],
+                "topic": "ask_values"
+            },
+            {
+                "topic": "show_spec",
+                "script": [
+                    {
+                        "text": [
+                            "```\n{{{vars.spec}}}\n```"
+                        ]
+                    },
+                    {
+                        "action": "complete"
+                    }
+                ]
+            },
+            {
+                "script": [
+                    {
+                        "text": [
+                            "{{status_info}}"
+                        ]
+                    },
+                    {
+                        "action": "complete"
+                    }
+                ],
+                "topic": "status_info"
+            },
+            {
+                "topic": "ask_params",
+                "script": [
+                    {
+                        "text": [
+                            "What are the *parameters* of the method? (or *none*)"
+                        ],
+                        "collect": {
+                            "key": "param_names",
+                            "options": [
+                                {
+                                    "default": true,
+                                    "pattern": "default",
+                                    "action": "next"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "action": "complete"
+                    }
+                ]
+            },
+            {
+                "topic": "ask_param_values",
+                "script": [
+                    {
+                        "text": [
+                            "Please provide me a value for *{{vars.param}}*"
+                        ],
+                        "collect": {
+                            "key": "param_value",
+                            "options": [
+                                {
+                                    "default": true,
+                                    "pattern": "default",
+                                    "action": "next"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "action": "complete"
+                    }
+                ]
+            },
+            {
+                "topic": "ask_model_name",
+                "script": [
+                    {
+                        "text": [
+                            "Which is the *model* containing the method?"
+                        ],
+                        "collect": {
+                            "key": "model_name",
+                            "options": [
+                                {
+                                    "default": true,
+                                    "pattern": "default",
+                                    "action": "next"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "action": "complete"
+                    }
+                ]
+            },
+            {
+                "topic": "ask_method_value",
+                "script": [
+                    {
+                        "text": [
+                            "Let me know the *expected result* for the method under the test"
+                        ],
+                        "collect": {
+                            "key": "method_value",
+                            "options": [
+                                {
+                                    "default": true,
+                                    "pattern": "default",
+                                    "action": "next"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "action": "complete"
+                    }
+                ]
+            }
+        ],
+        "variables": [
+            {
+                "id": 308,
+                "type": "string",
+                "name": "param_names"
+            },
+            {
+                "id": 417,
+                "type": "string",
+                "name": "add_param_names"
+            },
+            {
+                "name": "method_value",
+                "type": "string",
+                "id": 80
+            },
+            {
+                "name": "method_name",
+                "type": "string",
+                "id": 250
+            },
+            {
+                "name": "param_value",
+                "type": "string",
+                "id": 424
+            },
+            {
+                "name": "params_names",
+                "type": "string",
+                "id": 278
+            },
+            {
+                "id": 265,
+                "type": "string",
+                "name": "attribute_names"
+            },
+            {
+                "name": "attribute_value",
+                "type": "string",
+                "id": 31
+            },
+            {
+                "id": 224,
+                "type": "string",
+                "name": "valid_attr"
+            },
+            {
+                "id": 161,
+                "type": "string",
+                "name": "model_name"
+            },
+            {
+                "type": "string",
+                "name": "question_1"
+            },
+            {
+                "type": "string",
+                "name": "question_2"
+            },
+            {
+                "type": "string",
+                "name": "question_3"
+            }
+        ],
+        "triggers": [
+            {
+                "pattern": "refine_spec_validation",
+                "type": "string"
+            }
+        ]
+    }
+]

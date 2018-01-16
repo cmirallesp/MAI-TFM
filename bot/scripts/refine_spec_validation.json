@@ -1,0 +1,155 @@
+[
+    {
+        "command": "refine_spec_validation",
+        "description": "specification of a validation test",
+        "__v": 0,
+        "script": [
+            {
+                "script": [
+                    {
+                        "action": "ask_model_name"
+                    }
+                ],
+                "topic": "default"
+            },
+            {
+                "script": [
+                    {
+                        "meta": [],
+                        "collect": {
+                            "options": [
+                                {
+                                    "action": "next",
+                                    "pattern": "default",
+                                    "default": true
+                                }
+                            ],
+                            "key": "model_name"
+                        },
+                        "text": [
+                            "What *model* do you want add a validation?"
+                        ]
+                    },
+                    {
+                        "action": "ask_attributes"
+                    }
+                ],
+                "topic": "ask_model_name"
+            },
+            {
+                "script": [
+                    {
+                        "meta": [],
+                        "collect": {
+                            "options": [
+                                {
+                                    "action": "next",
+                                    "pattern": "default",
+                                    "default": true
+                                }
+                            ],
+                            "key": "attribute_names",
+                            "multiple": false
+                        },
+                        "text": [
+                            "Which *attributes* are needed to be valid?"
+                        ]
+                    },
+                    {
+                        "action": "ask_values"
+                    }
+                ],
+                "topic": "ask_attributes"
+            },
+            {
+                "script": [
+                    {
+                        "text": [
+                            "Please provide me a value for *{{vars.attribute}}*"
+                        ],
+                        "collect": {
+                            "key": "attribute_value",
+                            "options": [
+                                {
+                                    "default": true,
+                                    "pattern": "default",
+                                    "action": "next"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "action": "complete"
+                    }
+                ],
+                "topic": "ask_values"
+            },
+            {
+                "topic": "show_spec",
+                "script": [
+                    {
+                        "text": [
+                            "```\n{{{vars.spec}}}\n```"
+                        ]
+                    },
+                    {
+                        "action": "complete"
+                    }
+                ]
+            },
+            {
+                "script": [
+                    {
+                        "text": [
+                            "{{status_info}}"
+                        ]
+                    },
+                    {
+                        "action": "complete"
+                    }
+                ],
+                "topic": "status_info"
+            }
+        ],
+        "variables": [
+            {
+                "id": 265,
+                "type": "string",
+                "name": "attribute_names"
+            },
+            {
+                "name": "attribute_value",
+                "type": "string",
+                "id": 31
+            },
+            {
+                "id": 224,
+                "type": "string",
+                "name": "valid_attr"
+            },
+            {
+                "id": 161,
+                "type": "string",
+                "name": "model_name"
+            },
+            {
+                "type": "string",
+                "name": "question_1"
+            },
+            {
+                "type": "string",
+                "name": "question_2"
+            },
+            {
+                "type": "string",
+                "name": "question_3"
+            }
+        ],
+        "triggers": [
+            {
+                "pattern": "refine_spec_validation",
+                "type": "string"
+            }
+        ]
+    }
+]

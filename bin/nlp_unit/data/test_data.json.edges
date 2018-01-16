@@ -1,0 +1,1896 @@
+﻿{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "I want to describe a validation for Address model",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "Address",
+            "start": 36,
+            "end": 43
+          }
+        ]
+      },
+      {
+        "text": "Given a project When is created with attributes name, num-of-tasks and num-of-people Then it should be valid",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "project",
+            "start": 8,
+            "end": 15
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 16,
+            "end": 20
+          },
+          {
+            "entity": "att_name",
+            "value": "name",
+            "start": 48,
+            "end": 52
+          },
+          {
+            "entity": "att_name",
+            "value": "num-of-tasks",
+            "start": 54,
+            "end": 66
+          },
+          {
+            "entity": "att_name",
+            "value": "num-of-people",
+            "start": 71,
+            "end": 84
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 85,
+            "end": 89
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 100,
+            "end": 102
+          },
+          {
+            "entity": "method_name",
+            "value": "valid",
+            "start": 103,
+            "end": 108
+          },
+          {
+            "start": 21,
+            "end": 31,
+            "value": "is created",
+            "entity": "method"
+          }
+        ]
+      },
+      {
+        "text": "I want to describe a method for user model",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 32,
+            "end": 36
+          }
+        ]
+      },
+      {
+        "text": "describe a validation for projects model",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "projects",
+            "start": 26,
+            "end": 34
+          }
+        ]
+      },
+      {
+        "text": "Given an user u1 And an user u2 When u1 removes the connection with u2 And I call get-users with u1 Then I not expect u2 be included",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 9,
+            "end": 13
+          },
+          {
+            "entity": "instance_name",
+            "value": "u1",
+            "start": 14,
+            "end": 16
+          },
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 9,
+            "end": 13
+          },
+          {
+            "entity": "instance_name",
+            "value": "u2",
+            "start": 29,
+            "end": 31
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 32,
+            "end": 36
+          },
+          {
+            "entity": "instance_name",
+            "value": "u1",
+            "start": 14,
+            "end": 16
+          },
+          {
+            "entity": "par_value",
+            "value": "u2",
+            "start": 29,
+            "end": 31
+          },
+          {
+            "entity": "method_name",
+            "value": "get-users",
+            "start": 82,
+            "end": 91
+          },
+          {
+            "entity": "par_value",
+            "value": "u1",
+            "start": 14,
+            "end": 16
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 100,
+            "end": 104
+          },
+          {
+            "entity": "neg",
+            "value": "not",
+            "start": 107,
+            "end": 110
+          },
+          {
+            "entity": "expected_value",
+            "value": "u2",
+            "start": 29,
+            "end": 31
+          },
+          {
+            "entity": "op",
+            "value": "included",
+            "start": 124,
+            "end": 132
+          },
+          {
+            "start": 24,
+            "end": 28,
+            "value": "user",
+            "entity": "model_name"
+          },
+          {
+            "start": 37,
+            "end": 39,
+            "value": "u1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 40,
+            "end": 47,
+            "value": "removes",
+            "entity": "method"
+          },
+          {
+            "start": 68,
+            "end": 70,
+            "value": "u2",
+            "entity": "par_value"
+          },
+          {
+            "start": 97,
+            "end": 99,
+            "value": "u1",
+            "entity": "par_value"
+          },
+          {
+            "start": 118,
+            "end": 120,
+            "value": "u2",
+            "entity": "expected_value"
+          }
+        ]
+      },
+      {
+        "text": "Given a calculator cal When the method subtract with parameters 10 and 5 Then should be 5",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "calculator",
+            "start": 8,
+            "end": 18
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 23,
+            "end": 27
+          },
+          {
+            "entity": "method_name",
+            "value": "subtract",
+            "start": 39,
+            "end": 47
+          },
+          {
+            "entity": "par_value",
+            "value": "10",
+            "start": 64,
+            "end": 66
+          },
+          {
+            "entity": "par_value",
+            "value": "5",
+            "start": 71,
+            "end": 72
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 73,
+            "end": 77
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 85,
+            "end": 87
+          },
+          {
+            "entity": "expected_value",
+            "value": "5",
+            "start": 71,
+            "end": 72
+          }
+        ]
+      },
+      {
+        "text": "given a bank_account When I initialize with holder, expiration_date and cvv Then should be valid",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "bank_account",
+            "start": 8,
+            "end": 20
+          },
+          {
+            "entity": "att_name",
+            "value": "holder",
+            "start": 44,
+            "end": 50
+          },
+          {
+            "entity": "att_name",
+            "value": "expiration_date",
+            "start": 52,
+            "end": 67
+          },
+          {
+            "entity": "att_name",
+            "value": "cvv",
+            "start": 72,
+            "end": 75
+          },
+          {
+            "entity": "method_name",
+            "value": "valid",
+            "start": 91,
+            "end": 96
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 88,
+            "end": 90
+          },
+          {
+            "entity": "method",
+            "value": "initialize",
+            "start": 28,
+            "end": 38
+          },
+          {
+            "start": 76,
+            "end": 80,
+            "value": "Then",
+            "entity": "then"
+          },
+          {
+            "start": 21,
+            "end": 25,
+            "value": "When",
+            "entity": "when"
+          }
+        ]
+      },
+      {
+        "text": "Given an user u1 And an user u2 When u1 links to u2 And I call get-users with parameter u1 Then I expect u2 to be included",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "start": 9,
+            "end": 13,
+            "value": "user",
+            "entity": "model_name"
+          },
+          {
+            "start": 14,
+            "end": 16,
+            "value": "u1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 24,
+            "end": 28,
+            "value": "user",
+            "entity": "model_name"
+          },
+          {
+            "start": 29,
+            "end": 31,
+            "value": "u2",
+            "entity": "instance_name"
+          },
+          {
+            "start": 37,
+            "end": 39,
+            "value": "u1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 49,
+            "end": 51,
+            "value": "u2",
+            "entity": "par_value"
+          },
+          {
+            "start": 63,
+            "end": 72,
+            "value": "get-users",
+            "entity": "method_name"
+          },
+          {
+            "start": 88,
+            "end": 90,
+            "value": "u1",
+            "entity": "par_value"
+          },
+          {
+            "start": 105,
+            "end": 107,
+            "value": "u2",
+            "entity": "expected_value"
+          },
+          {
+            "start": 114,
+            "end": 122,
+            "value": "included",
+            "entity": "op"
+          },
+          {
+            "start": 32,
+            "end": 36,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 91,
+            "end": 95,
+            "value": "Then",
+            "entity": "then"
+          },
+          {
+            "start": 40,
+            "end": 48,
+            "value": "links to",
+            "entity": "method"
+          }
+        ]
+      },
+      {
+        "text": "given a ring When I call the method join with parameters 'a', 'b' and 'g' Then should return 'a,b,g'",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "ring",
+            "start": 8,
+            "end": 12
+          },
+          {
+            "entity": "method_name",
+            "value": "join",
+            "start": 36,
+            "end": 40
+          },
+          {
+            "entity": "expected_value",
+            "value": "'a,b,g'",
+            "start": 93,
+            "end": 100
+          },
+          {
+            "entity": "par_value",
+            "value": "'a'",
+            "start": 57,
+            "end": 60
+          },
+          {
+            "entity": "par_value",
+            "value": "'b'",
+            "start": 62,
+            "end": 65
+          },
+          {
+            "entity": "par_value",
+            "value": "'g'",
+            "start": 70,
+            "end": 73
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 86,
+            "end": 92
+          },
+          {
+            "start": 13,
+            "end": 17,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 74,
+            "end": 78,
+            "value": "Then",
+            "entity": "then"
+          }
+        ]
+      },
+      {
+        "text": "I want to describe a method getname for user entity",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "method_name",
+            "value": "getname",
+            "start": 28,
+            "end": 35
+          },
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 40,
+            "end": 44
+          }
+        ]
+      },
+      {
+        "text": "Given a project p1 And a Task t1 When t1 is assigned to p1 And I call last-task with p1 Then should return t1",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "start": 107,
+            "end": 109,
+            "value": "t1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 8,
+            "end": 15,
+            "value": "project",
+            "entity": "model_name"
+          },
+          {
+            "start": 16,
+            "end": 18,
+            "value": "p1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 25,
+            "end": 29,
+            "value": "Task",
+            "entity": "model_name"
+          },
+          {
+            "start": 30,
+            "end": 32,
+            "value": "t1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 38,
+            "end": 40,
+            "value": "t1",
+            "entity": "par_value"
+          },
+          {
+            "start": 56,
+            "end": 58,
+            "value": "p1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 70,
+            "end": 79,
+            "value": "last-task",
+            "entity": "method_name"
+          },
+          {
+            "start": 85,
+            "end": 87,
+            "value": "p1",
+            "entity": "par_value"
+          },
+          {
+            "start": 100,
+            "end": 106,
+            "value": "return",
+            "entity": "op"
+          },
+          {
+            "start": 107,
+            "end": 109,
+            "value": "t1",
+            "entity": "expected_value"
+          },
+          {
+            "start": 33,
+            "end": 37,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 88,
+            "end": 92,
+            "value": "Then",
+            "entity": "then"
+          },
+          {
+            "start": 41,
+            "end": 55,
+            "value": "is assigned to",
+            "entity": "method"
+          }
+        ]
+      },
+      {
+        "text": "Given an user When the method getname is called with parameters 'Daniel' and 'Mur' Then  should return 'Daniel Mur'",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 9,
+            "end": 13
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 14,
+            "end": 18
+          },
+          {
+            "entity": "method_name",
+            "value": "getname",
+            "start": 30,
+            "end": 37
+          },
+          {
+            "entity": "par_value",
+            "value": "'Daniel'",
+            "start": 64,
+            "end": 72
+          },
+          {
+            "entity": "par_value",
+            "value": "'Mur'",
+            "start": 77,
+            "end": 82
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 83,
+            "end": 87
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 96,
+            "end": 102
+          },
+          {
+            "entity": "expected_value",
+            "value": "'Daniel Mur'",
+            "start": 103,
+            "end": 115
+          }
+        ]
+      },
+      {
+        "text": "Given a car When is initialized with color: 'red', cvv: 200 and speed: 300 Then it should be valid",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "car",
+            "start": 8,
+            "end": 11
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 12,
+            "end": 16
+          },
+          {
+            "entity": "att_name",
+            "value": "color",
+            "start": 37,
+            "end": 42
+          },
+          {
+            "entity": "att_value",
+            "value": "'red'",
+            "start": 44,
+            "end": 49
+          },
+          {
+            "entity": "att_name",
+            "value": "cvv",
+            "start": 51,
+            "end": 54
+          },
+          {
+            "entity": "att_value",
+            "value": "200",
+            "start": 56,
+            "end": 59
+          },
+          {
+            "entity": "att_name",
+            "value": "speed",
+            "start": 64,
+            "end": 69
+          },
+          {
+            "entity": "att_value",
+            "value": "300",
+            "start": 71,
+            "end": 74
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 75,
+            "end": 79
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 90,
+            "end": 92
+          },
+          {
+            "entity": "method_name",
+            "value": "valid",
+            "start": 93,
+            "end": 98
+          },
+          {
+            "start": 17,
+            "end": 31,
+            "value": "is initialized",
+            "entity": "method"
+          }
+        ]
+      },
+      {
+        "text": "Given a car When is initialized with color, cvv, seats and speed Then it should be valid",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "car",
+            "start": 8,
+            "end": 11
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 12,
+            "end": 16
+          },
+          {
+            "entity": "att_name",
+            "value": "color",
+            "start": 37,
+            "end": 42
+          },
+          {
+            "entity": "att_name",
+            "value": "cvv",
+            "start": 44,
+            "end": 47
+          },
+          {
+            "entity": "att_name",
+            "value": "seats",
+            "start": 49,
+            "end": 54
+          },
+          {
+            "entity": "att_name",
+            "value": "speed",
+            "start": 59,
+            "end": 64
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 65,
+            "end": 69
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 80,
+            "end": 82
+          },
+          {
+            "entity": "method_name",
+            "value": "valid",
+            "start": 83,
+            "end": 88
+          },
+          {
+            "start": 17,
+            "end": 31,
+            "value": "is initialized",
+            "entity": "method"
+          }
+        ]
+      },
+      {
+        "text": "given a ring When the method join is called with 'a' and 'tt' Then should return 'a,d,e,f,g'",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "ring",
+            "start": 8,
+            "end": 12
+          },
+          {
+            "entity": "method_name",
+            "value": "join",
+            "start": 29,
+            "end": 33
+          },
+          {
+            "entity": "expected_value",
+            "value": "'a,d,e,f,g'",
+            "start": 81,
+            "end": 92
+          },
+          {
+            "entity": "par_value",
+            "value": "'a'",
+            "start": 49,
+            "end": 52
+          },
+          {
+            "entity": "par_value",
+            "value": "'tt'",
+            "start": 57,
+            "end": 61
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 74,
+            "end": 80
+          },
+          {
+            "start": 13,
+            "end": 17,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 62,
+            "end": 66,
+            "value": "Then",
+            "entity": "then"
+          }
+        ]
+      },
+      {
+        "text": "Given a company c1 And a person p1 When I add p1 to c1  Then c1 should be included",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "company",
+            "start": 8,
+            "end": 15
+          },
+          {
+            "entity": "instance_name",
+            "value": "c1",
+            "start": 16,
+            "end": 18
+          },
+          {
+            "entity": "model_name",
+            "value": "person",
+            "start": 25,
+            "end": 31
+          },
+          {
+            "entity": "instance_name",
+            "value": "p1",
+            "start": 32,
+            "end": 34
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 35,
+            "end": 39
+          },
+          {
+            "entity": "method_name",
+            "value": "add",
+            "start": 42,
+            "end": 45
+          },
+          {
+            "entity": "par_value",
+            "value": "p1",
+            "start": 32,
+            "end": 34
+          },
+          {
+            "entity": "instance_name",
+            "value": "c1",
+            "start": 16,
+            "end": 18
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 56,
+            "end": 60
+          },
+          {
+            "entity": "expected_value",
+            "value": "c1",
+            "start": 16,
+            "end": 18
+          },
+          {
+            "entity": "op",
+            "value": "included",
+            "start": 74,
+            "end": 82
+          },
+          {
+            "start": 52,
+            "end": 54,
+            "value": "c1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 46,
+            "end": 48,
+            "value": "p1",
+            "entity": "par_value"
+          },
+          {
+            "start": 61,
+            "end": 63,
+            "value": "c1",
+            "entity": "expected_value"
+          }
+        ]
+      },
+      {
+        "text": "Given a document d And revisor r When I assign d to r And I call revisor-of with d Then r should be returned",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "start": 100,
+            "end": 108,
+            "value": "returned",
+            "entity": "op"
+          },
+          {
+            "start": 88,
+            "end": 89,
+            "value": "r",
+            "entity": "expected_value"
+          },
+          {
+            "start": 65,
+            "end": 75,
+            "value": "revisor-of",
+            "entity": "method_name"
+          },
+          {
+            "start": 31,
+            "end": 32,
+            "value": "r",
+            "entity": "par_value"
+          },
+          {
+            "start": 40,
+            "end": 46,
+            "value": "assign",
+            "entity": "method"
+          },
+          {
+            "start": 31,
+            "end": 32,
+            "value": "r",
+            "entity": "instance_name"
+          },
+          {
+            "start": 23,
+            "end": 30,
+            "value": "revisor",
+            "entity": "model_name"
+          },
+          {
+            "start": 8,
+            "end": 16,
+            "value": "document",
+            "entity": "model_name"
+          },
+          {
+            "start": 81,
+            "end": 82,
+            "value": "d",
+            "entity": "par_value"
+          },
+          {
+            "start": 33,
+            "end": 37,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 83,
+            "end": 87,
+            "value": "Then",
+            "entity": "then"
+          },
+          {
+            "start": 47,
+            "end": 48,
+            "value": "d",
+            "entity": "par_value"
+          },
+          {
+            "start": 52,
+            "end": 53,
+            "value": "r",
+            "entity": "instance_name"
+          },
+          {
+            "start": 17,
+            "end": 18,
+            "value": "d",
+            "entity": "instance_name"
+          }
+        ]
+      },
+      {
+        "text": "Given a library l And a book b When the l acquires b And I call books with l Then b should be returned",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "start": 64,
+            "end": 69,
+            "value": "books",
+            "entity": "method_name"
+          },
+          {
+            "start": 42,
+            "end": 50,
+            "value": "acquires",
+            "entity": "method"
+          },
+          {
+            "start": 40,
+            "end": 41,
+            "value": "l",
+            "entity": "instance_name"
+          },
+          {
+            "start": 24,
+            "end": 28,
+            "value": "book",
+            "entity": "model_name"
+          },
+          {
+            "start": 8,
+            "end": 15,
+            "value": "library",
+            "entity": "model_name"
+          },
+          {
+            "start": 16,
+            "end": 17,
+            "value": "l",
+            "entity": "instance_name"
+          },
+          {
+            "start": 29,
+            "end": 30,
+            "value": "b",
+            "entity": "instance_name"
+          },
+          {
+            "start": 51,
+            "end": 52,
+            "value": "b",
+            "entity": "par_value"
+          },
+          {
+            "start": 75,
+            "end": 76,
+            "value": "l",
+            "entity": "par_value"
+          },
+          {
+            "start": 82,
+            "end": 83,
+            "value": "b",
+            "entity": "expected_value"
+          },
+          {
+            "start": 94,
+            "end": 102,
+            "value": "returned",
+            "entity": "op"
+          },
+          {
+            "start": 31,
+            "end": 35,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 77,
+            "end": 81,
+            "value": "Then",
+            "entity": "then"
+          }
+        ]
+      },
+      {
+        "text": "Given a string When the method concat is called with parameters 'tt', 'aa' and 'zz' Then should return 'tt,aa,zz'",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "string",
+            "start": 8,
+            "end": 14
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 15,
+            "end": 19
+          },
+          {
+            "entity": "method_name",
+            "value": "concat",
+            "start": 31,
+            "end": 37
+          },
+          {
+            "entity": "par_value",
+            "value": "'tt'",
+            "start": 64,
+            "end": 68
+          },
+          {
+            "entity": "par_value",
+            "value": "'aa'",
+            "start": 70,
+            "end": 74
+          },
+          {
+            "entity": "par_value",
+            "value": "'zz'",
+            "start": 79,
+            "end": 83
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 84,
+            "end": 88
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 96,
+            "end": 102
+          },
+          {
+            "entity": "expected_value",
+            "value": "'tt,aa,zz'",
+            "start": 103,
+            "end": 113
+          }
+        ]
+      },
+      {
+        "text": "Given an user u1 And an user u2 When I disconnect u1 from u2 And I call get-users with u1 Then u2 should not be included",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 9,
+            "end": 13
+          },
+          {
+            "entity": "instance_name",
+            "value": "u1",
+            "start": 14,
+            "end": 16
+          },
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 9,
+            "end": 13
+          },
+          {
+            "entity": "instance_name",
+            "value": "u2",
+            "start": 29,
+            "end": 31
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 32,
+            "end": 36
+          },
+          {
+            "entity": "instance_name",
+            "value": "u1",
+            "start": 14,
+            "end": 16
+          },
+          {
+            "entity": "par_value",
+            "value": "u2",
+            "start": 29,
+            "end": 31
+          },
+          {
+            "entity": "method_name",
+            "value": "get-users",
+            "start": 72,
+            "end": 81
+          },
+          {
+            "entity": "par_value",
+            "value": "u1",
+            "start": 14,
+            "end": 16
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 90,
+            "end": 94
+          },
+          {
+            "entity": "expected_value",
+            "value": "u2",
+            "start": 29,
+            "end": 31
+          },
+          {
+            "entity": "neg",
+            "value": "not",
+            "start": 105,
+            "end": 108
+          },
+          {
+            "entity": "op",
+            "value": "included",
+            "start": 112,
+            "end": 120
+          },
+          {
+            "start": 24,
+            "end": 28,
+            "value": "user",
+            "entity": "model_name"
+          },
+          {
+            "start": 39,
+            "end": 49,
+            "value": "disconnect",
+            "entity": "method"
+          },
+          {
+            "start": 50,
+            "end": 52,
+            "value": "u1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 58,
+            "end": 60,
+            "value": "u2",
+            "entity": "par_value"
+          },
+          {
+            "start": 87,
+            "end": 89,
+            "value": "u1",
+            "entity": "par_value"
+          },
+          {
+            "start": 95,
+            "end": 97,
+            "value": "u2",
+            "entity": "expected_value"
+          }
+        ]
+      },
+      {
+        "text": "Given an user u1 And an user u2 When u1 links  to u2 And I call get-users with u1 Then u2 should be included",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "user",
+            "start": 9,
+            "end": 13
+          },
+          {
+            "entity": "instance_name",
+            "value": "u1",
+            "start": 14,
+            "end": 16
+          },
+          {
+            "entity": "method_name",
+            "value": "get-users",
+            "start": 64,
+            "end": 73
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 82,
+            "end": 86
+          },
+          {
+            "start": 32,
+            "end": 36,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 24,
+            "end": 28,
+            "value": "user",
+            "entity": "model_name"
+          },
+          {
+            "start": 37,
+            "end": 39,
+            "value": "u1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 50,
+            "end": 52,
+            "value": "u2",
+            "entity": "par_value"
+          },
+          {
+            "start": 79,
+            "end": 81,
+            "value": "u1",
+            "entity": "par_value"
+          },
+          {
+            "start": 87,
+            "end": 89,
+            "value": "u2",
+            "entity": "expected_value"
+          },
+          {
+            "start": 100,
+            "end": 108,
+            "value": "included",
+            "entity": "op"
+          },
+          {
+            "start": 29,
+            "end": 31,
+            "value": "u2",
+            "entity": "instance_name"
+          },
+          {
+            "start": 40,
+            "end": 49,
+            "value": "links  to",
+            "entity": "method"
+          }
+        ]
+      },
+      {
+        "text": "Given a list lst When I call the method add with parameters 5 and 7 Then should return '5,7'",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "list",
+            "start": 8,
+            "end": 12
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 17,
+            "end": 21
+          },
+          {
+            "entity": "method_name",
+            "value": "add",
+            "start": 40,
+            "end": 43
+          },
+          {
+            "entity": "par_value",
+            "value": "5",
+            "start": 60,
+            "end": 61
+          },
+          {
+            "entity": "par_value",
+            "value": "7",
+            "start": 66,
+            "end": 67
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 68,
+            "end": 72
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 80,
+            "end": 86
+          },
+          {
+            "entity": "expected_value",
+            "value": "'5,7'",
+            "start": 87,
+            "end": 92
+          },
+          {
+            "start": 13,
+            "end": 16,
+            "value": "lst",
+            "entity": "instance_name"
+          }
+        ]
+      },
+      {
+        "text": "Given a person p1 And a computer c1 When c1 is buyed by p1 And I call my-things with p1 Then c1 should be included",
+        "intent": "SERVICE_TEST",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "person",
+            "entity": "model_name"
+          },
+          {
+            "start": 15,
+            "end": 17,
+            "value": "p1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 24,
+            "end": 32,
+            "value": "computer",
+            "entity": "model_name"
+          },
+          {
+            "start": 33,
+            "end": 35,
+            "value": "c1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 41,
+            "end": 43,
+            "value": "c1",
+            "entity": "par_value"
+          },
+          {
+            "start": 56,
+            "end": 58,
+            "value": "p1",
+            "entity": "instance_name"
+          },
+          {
+            "start": 70,
+            "end": 79,
+            "value": "my-things",
+            "entity": "method_name"
+          },
+          {
+            "start": 85,
+            "end": 87,
+            "value": "p1",
+            "entity": "par_value"
+          },
+          {
+            "start": 93,
+            "end": 95,
+            "value": "c1",
+            "entity": "expected_value"
+          },
+          {
+            "start": 106,
+            "end": 114,
+            "value": "included",
+            "entity": "op"
+          },
+          {
+            "start": 44,
+            "end": 52,
+            "value": "is buyed",
+            "entity": "method"
+          },
+          {
+            "start": 36,
+            "end": 40,
+            "value": "When",
+            "entity": "when"
+          },
+          {
+            "start": 88,
+            "end": 92,
+            "value": "Then",
+            "entity": "then"
+          }
+        ]
+      },
+      {
+        "text": "Given a project p When I call add-priority with params '1' and '5' Then should return '5'",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "project",
+            "start": 8,
+            "end": 15
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 18,
+            "end": 22
+          },
+          {
+            "entity": "method_name",
+            "value": "add-priority",
+            "start": 30,
+            "end": 42
+          },
+          {
+            "entity": "par_value",
+            "value": "'1'",
+            "start": 55,
+            "end": 58
+          },
+          {
+            "entity": "par_value",
+            "value": "'5'",
+            "start": 63,
+            "end": 66
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 67,
+            "end": 71
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 79,
+            "end": 85
+          },
+          {
+            "start": 16,
+            "end": 17,
+            "value": "p",
+            "entity": "instance_name"
+          },
+          {
+            "start": 86,
+            "end": 89,
+            "value": "'5'",
+            "entity": "expected_value"
+          }
+        ]
+      },
+      {
+        "text": "I want to describe a method of a model",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": []
+      },
+      {
+        "text": "Given a project When is created with attributes name: 'p1', num-of-tasks: 2   Then should be valid",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "project",
+            "start": 8,
+            "end": 15
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 16,
+            "end": 20
+          },
+          {
+            "entity": "att_name",
+            "value": "name",
+            "start": 48,
+            "end": 52
+          },
+          {
+            "entity": "att_value",
+            "value": "'p1'",
+            "start": 54,
+            "end": 58
+          },
+          {
+            "entity": "att_name",
+            "value": "num-of-tasks",
+            "start": 60,
+            "end": 72
+          },
+          {
+            "entity": "att_value",
+            "value": "2",
+            "start": 74,
+            "end": 75
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 78,
+            "end": 82
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 90,
+            "end": 92
+          },
+          {
+            "entity": "method_name",
+            "value": "valid",
+            "start": 93,
+            "end": 98
+          },
+          {
+            "start": 21,
+            "end": 31,
+            "value": "is created",
+            "entity": "method"
+          }
+        ]
+      },
+      {
+        "text": "Given a calculator When I call the method sum with 3 and 4 as parameters Then should return 7",
+        "intent": "MODEL_METHOD_TEST",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "calculator",
+            "start": 8,
+            "end": 18
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 19,
+            "end": 23
+          },
+          {
+            "entity": "method_name",
+            "value": "sum",
+            "start": 42,
+            "end": 45
+          },
+          {
+            "entity": "par_value",
+            "value": "3",
+            "start": 51,
+            "end": 52
+          },
+          {
+            "entity": "par_value",
+            "value": "4",
+            "start": 57,
+            "end": 58
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 73,
+            "end": 77
+          },
+          {
+            "entity": "op",
+            "value": "return",
+            "start": 85,
+            "end": 91
+          },
+          {
+            "entity": "expected_value",
+            "value": "7",
+            "start": 92,
+            "end": 93
+          }
+        ]
+      },
+      {
+        "text": "Given a project When I instantiated with name: 'prj1', num-of-tasks: 3, deadline: '01/01/2017' and num-of-people: 5 Then should be valid",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "entity": "model_name",
+            "value": "project",
+            "start": 8,
+            "end": 15
+          },
+          {
+            "entity": "when",
+            "value": "When",
+            "start": 16,
+            "end": 20
+          },
+          {
+            "entity": "method",
+            "value": "instantiated",
+            "start": 23,
+            "end": 35
+          },
+          {
+            "entity": "att_name",
+            "value": "name",
+            "start": 41,
+            "end": 45
+          },
+          {
+            "entity": "att_value",
+            "value": "'prj1'",
+            "start": 47,
+            "end": 53
+          },
+          {
+            "entity": "att_name",
+            "value": "num-of-tasks",
+            "start": 55,
+            "end": 67
+          },
+          {
+            "entity": "att_value",
+            "value": "3",
+            "start": 69,
+            "end": 70
+          },
+          {
+            "entity": "att_name",
+            "value": "deadline",
+            "start": 72,
+            "end": 80
+          },
+          {
+            "entity": "att_value",
+            "value": "'01/01/2017'",
+            "start": 82,
+            "end": 94
+          },
+          {
+            "entity": "att_name",
+            "value": "num-of-people",
+            "start": 99,
+            "end": 112
+          },
+          {
+            "entity": "att_value",
+            "value": "5",
+            "start": 114,
+            "end": 115
+          },
+          {
+            "entity": "then",
+            "value": "Then",
+            "start": 116,
+            "end": 120
+          },
+          {
+            "entity": "op",
+            "value": "be",
+            "start": 128,
+            "end": 130
+          },
+          {
+            "entity": "method_name",
+            "value": "valid",
+            "start": 131,
+            "end": 136
+          }
+        ]
+      },
+      {
+        "text": "Given a project When I instantiate with name: 'prj1', num-of-tasks: 3, deadline: '01/01/2017', priority: 0 and num-of-people: 5 Then should be valid",
+        "intent": "MODEL_VALIDATION",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "project",
+            "entity": "model_name"
+          },
+          {
+            "start": 23,
+            "end": 34,
+            "value": "instantiate",
+            "entity": "method"
+          },
+          {
+            "start": 40,
+            "end": 44,
+            "value": "name",
+            "entity": "att_name"
+          },
+          {
+            "start": 46,
+            "end": 52,
+            "value": "'prj1'",
+            "entity": "att_value"
+          },
+          {
+            "start": 54,
+            "end": 66,
+            "value": "num-of-tasks",
+            "entity": "att_name"
+          },
+          {
+            "start": 68,
+            "end": 69,
+            "value": "3",
+            "entity": "att_value"
+          },
+          {
+            "start": 71,
+            "end": 79,
+            "value": "deadline",
+            "entity": "att_name"
+          },
+          {
+            "start": 81,
+            "end": 93,
+            "value": "'01/01/2017'",
+            "entity": "att_value"
+          },
+          {
+            "start": 111,
+            "end": 124,
+            "value": "num-of-people",
+            "entity": "att_name"
+          },
+          {
+            "start": 126,
+            "end": 127,
+            "value": "5",
+            "entity": "att_value"
+          },
+          {
+            "start": 95,
+            "end": 103,
+            "value": "priority",
+            "entity": "att_name"
+          },
+          {
+            "start": 105,
+            "end": 106,
+            "value": "0",
+            "entity": "att_value"
+          },
+          {
+            "start": 140,
+            "end": 142,
+            "value": "be",
+            "entity": "op"
+          },
+          {
+            "start": 143,
+            "end": 148,
+            "value": "valid",
+            "entity": "method_name"
+          }
+        ]
+      }
+    ],
+    "regex_features": [],
+    "entity_synonyms": [
+      {
+        "value": "last-name",
+        "synonyms": [
+          "last name",
+          "last_name",
+          "lastname"
+        ]
+      },
+      {
+        "value": " bank-account",
+        "synonyms": [
+          "bank account",
+          "bank_account",
+          "bankaccount"
+        ]
+      }
+    ]
+  }
+}

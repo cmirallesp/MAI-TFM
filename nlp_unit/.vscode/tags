@@ -1,0 +1,107 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CFG	../test.py	/^CFG = RasaNLUConfig(CONFIG_FNAME)$/;"	kind:variable	line:32
+ENC_COUNTERS	../test.py	/^ENC_COUNTERS = {$/;"	kind:variable	line:43
+ENDC	../test.py	/^ENDC = '\\033[0m'$/;"	kind:variable	line:9
+ENT_POS	../test.py	/^ENT_POS = {"att_name": 1, "att_value": 2, "par_name": 3,$/;"	kind:variable	line:56
+F	../test.py	/^    F = round(0 if P == 0 else 2 * P \/ (el["PREC"] + el["RECALL"]), 2)$/;"	kind:variable	line:144
+FAIL	../test.py	/^FAIL = '\\033[91m'$/;"	kind:variable	line:8
+FN	../test.py	/^    FN = ENC_COUNTERS[k]["FN"]$/;"	kind:variable	line:132
+FP	../test.py	/^    FP = ENC_COUNTERS[k]["FP"]$/;"	kind:variable	line:133
+INTERPRETER	../test.py	/^INTERPRETER = Interpreter.load(MODEL_DIRECTORY, CFG)$/;"	kind:variable	line:38
+IS_MITIE	../test.py	/^IS_MITIE = "nlp_mitie" in CFG["pipeline"]$/;"	kind:variable	line:33
+IS_SPACY	../test.py	/^IS_SPACY = "nlp_spacy" in CFG["pipeline"]$/;"	kind:variable	line:34
+Interpreter	../test.py	/^from rasa_nlu.model import Interpreter$/;"	kind:namespace	line:4
+KEYS	../test.py	/^KEYS = ENC_COUNTERS.keys()$/;"	kind:variable	line:139
+MDMultiline	../join_lines.py	/^class MDMultiline(object):$/;"	kind:class	line:11
+NLP_TYPE	../test.py	/^NLP_TYPE = "SPACY" if IS_SPACY else "MITIE"$/;"	kind:variable	line:36
+OK	../test.py	/^    OK = ENC_COUNTERS[k]["OK"]$/;"	kind:variable	line:131
+OKGREEN	../test.py	/^OKGREEN = '\\033[92m'$/;"	kind:variable	line:7
+P	../test.py	/^    P = el["PREC"] * el["RECALL"]$/;"	kind:variable	line:143
+PCT_KO	../test.py	/^PCT_KO = round(100. * KO_ENT \/ TOTAL, 2)$/;"	kind:variable	line:119
+PCT_OK	../test.py	/^PCT_OK = round(100. * OK_ENT \/ TOTAL, 2)$/;"	kind:variable	line:118
+PREC	../test.py	/^PREC = 1. * OK \/ (OK + KO)$/;"	kind:variable	line:124
+R	../test.py	/^    R = INTERPRETER.parse(text)$/;"	kind:variable	line:67
+R	../test.py	/^R = "Total labels: {}, OK:{}, KO:{}, accuracy: {}".format($/;"	kind:variable	line:125
+Rasa	../to_rasa_fmt.py	/^class Rasa(object):$/;"	kind:class	line:11
+RasaNLUConfig	../test.py	/^from rasa_nlu.config import RasaNLUConfig$/;"	kind:namespace	line:3
+RasaNLUConfig	../train.py	/^from rasa_nlu.config import RasaNLUConfig$/;"	kind:namespace	line:2
+StringIO	../gen_train_and_test.py	/^from io import StringIO$/;"	kind:namespace	line:5
+StringIO	../join_lines.py	/^from io import StringIO$/;"	kind:namespace	line:4
+StringIO	../to_rasa_fmt.py	/^from io import StringIO$/;"	kind:namespace	line:4
+TOTAL	../test.py	/^TOTAL = OK_ENT + KO_ENT$/;"	kind:variable	line:117
+Trainer	../train.py	/^from rasa_nlu.model import Trainer$/;"	kind:namespace	line:3
+__init__	../join_lines.py	/^    def __init__(self, json_file):$/;"	kind:member	line:13
+__init__	../to_rasa_fmt.py	/^    def __init__(self, json_file):$/;"	kind:member	line:13
+add_label_to_couters	../test.py	/^def add_label_to_couters(label):$/;"	kind:function	line:20
+add_prev	../join_lines.py	/^        def add_prev(r, prev):$/;"	kind:function	line:19
+array_to_json	../gen_train_and_test.py	/^def array_to_json(array,filename):$/;"	kind:function	line:33
+confidence	../test.py	/^    confidence = R['intent']['confidence']$/;"	kind:variable	line:71
+config_fname	../train.py	/^config_fname = sys.argv[2]$/;"	kind:variable	line:10
+el	../test.py	/^    el = ENC_COUNTERS[k]$/;"	kind:variable	line:142
+ensure_dir_exist	../file_utils.py	/^def ensure_dir_exist(directory):$/;"	kind:function	line:28
+ensure_dir_exist	../test.py	/^from file_utils import ensure_three_params, ensure_file_exist, ensure_dir_exist$/;"	kind:namespace	line:5
+ensure_file_exist	../file_utils.py	/^def ensure_file_exist(filename):$/;"	kind:function	line:19
+ensure_file_exist	../test.py	/^from file_utils import ensure_three_params, ensure_file_exist, ensure_dir_exist$/;"	kind:namespace	line:5
+ensure_one_param	../file_utils.py	/^def ensure_one_param(argv,msg):$/;"	kind:function	line:3
+ensure_three_params	../file_utils.py	/^def ensure_three_params(argv,msg):$/;"	kind:function	line:13
+ensure_three_params	../test.py	/^from file_utils import ensure_three_params, ensure_file_exist, ensure_dir_exist$/;"	kind:namespace	line:5
+ensure_two_params	../file_utils.py	/^def ensure_two_params(argv,msg):$/;"	kind:function	line:8
+entities	../test.py	/^    entities = [] if len(el) == 2 else sorted(el[2])$/;"	kind:variable	line:65
+entity	../test.py	/^        entity = [label, value]$/;"	kind:variable	line:86
+entity	../test.py	/^        entity = [label, value]$/;"	kind:variable	line:99
+error	../test.py	/^            error = True$/;"	kind:variable	line:101
+error	../test.py	/^            error = True$/;"	kind:variable	line:91
+error	../test.py	/^        error = True$/;"	kind:variable	line:77
+error	../test.py	/^    error = False$/;"	kind:variable	line:63
+examples	../gen_train_and_test.py	/^examples = [ ["I want to describe a validation", "MODEL_VALIDATION"],$/;"	kind:variable	line:8
+execute	../to_rasa_fmt.py	/^    def execute(self):$/;"	kind:member	line:45
+f	../join_lines.py	/^    f = open("{}\/rasa_{}.md".format(folder, name), "w+")$/;"	kind:variable	line:50
+f	../to_rasa_fmt.py	/^    f = open("{}\/rasa_{}.json".format(folder, name), "w+")$/;"	kind:variable	line:63
+file_utils.py	../file_utils.py	1;"	kind:file	line:1
+gen_train_and_test.py	../gen_train_and_test.py	1;"	kind:file	line:1
+get_common_examples	../to_rasa_fmt.py	/^    def get_common_examples(self):$/;"	kind:member	line:18
+join_lines	../join_lines.py	/^    def join_lines(self):$/;"	kind:member	line:18
+join_lines.py	../join_lines.py	1;"	kind:file	line:1
+json	../gen_train_and_test.py	/^import json$/;"	kind:namespace	line:2
+json	../join_lines.py	/^import json$/;"	kind:namespace	line:1
+json	../test.py	/^import json$/;"	kind:namespace	line:2
+json	../to_rasa_fmt.py	/^import json$/;"	kind:namespace	line:1
+load_data	../train.py	/^from rasa_nlu.converters import load_data$/;"	kind:namespace	line:1
+model_directory	../train.py	/^model_directory = trainer.persist('.\/projects\/')$/;"	kind:variable	line:15
+name	../gen_train_and_test.py	/^    name = filename$/;"	kind:variable	line:46
+ntpath	../file_utils.py	/^import ntpath$/;"	kind:namespace	line:1
+ntpath	../gen_train_and_test.py	/^import ntpath$/;"	kind:namespace	line:4
+ntpath	../join_lines.py	/^import ntpath$/;"	kind:namespace	line:5
+ntpath	../to_rasa_fmt.py	/^import ntpath$/;"	kind:namespace	line:5
+os	../join_lines.py	/^import os$/;"	kind:namespace	line:6
+os	../to_rasa_fmt.py	/^import os$/;"	kind:namespace	line:6
+pdb	../join_lines.py	/^import pdb$/;"	kind:namespace	line:8
+pdb	../test.py	/^import pdb$/;"	kind:namespace	line:6
+pdb	../to_rasa_fmt.py	/^import pdb$/;"	kind:namespace	line:8
+pprint	../join_lines.py	/^from pprint import pprint$/;"	kind:namespace	line:3
+pprint	../to_rasa_fmt.py	/^from pprint import pprint$/;"	kind:namespace	line:3
+predicted	../test.py	/^    predicted = R['intent']['name']$/;"	kind:variable	line:68
+predicted_entities	../test.py	/^    predicted_entities = sorted([[e["entity"], e["value"]]$/;"	kind:variable	line:69
+printko	../test.py	/^def printko(*text):$/;"	kind:function	line:16
+printok	../test.py	/^def printok(*text):$/;"	kind:function	line:12
+r	../join_lines.py	/^    r = MDMultiline(sys.argv[1])$/;"	kind:variable	line:46
+r	../to_rasa_fmt.py	/^    r = Rasa(sys.argv[1])$/;"	kind:variable	line:59
+sys	../gen_train_and_test.py	/^import sys$/;"	kind:namespace	line:1
+sys	../join_lines.py	/^import sys$/;"	kind:namespace	line:2
+sys	../test.py	/^import sys$/;"	kind:namespace	line:1
+sys	../to_rasa_fmt.py	/^import sys$/;"	kind:namespace	line:2
+sys	../train.py	/^import sys$/;"	kind:namespace	line:4
+test.py	../test.py	1;"	kind:file	line:1
+test_name	../gen_train_and_test.py	/^test_name = "{}\/{}.test".format(folder,name)$/;"	kind:variable	line:50
+to_rasa_fmt.py	../to_rasa_fmt.py	1;"	kind:file	line:1
+train.py	../train.py	1;"	kind:file	line:1
+train_fname	../train.py	/^train_fname = sys.argv[1]$/;"	kind:variable	line:9
+train_name	../gen_train_and_test.py	/^train_name = "{}\/{}.train".format(folder,name)$/;"	kind:variable	line:49
+train_test_split	../gen_train_and_test.py	/^from sklearn.model_selection import train_test_split$/;"	kind:namespace	line:3
+trainer	../train.py	/^trainer = Trainer(RasaNLUConfig(config_fname))$/;"	kind:variable	line:12
+training_data	../train.py	/^training_data = load_data(train_fname)$/;"	kind:variable	line:11
