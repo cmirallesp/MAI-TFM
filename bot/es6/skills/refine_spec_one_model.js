@@ -21,7 +21,9 @@ export default class RefineSpecOneModel extends SkillsBase{
       this.fsm().set_model_name(model_name)
     }
     else{
-      this.log("WARNING: multiple model_names detected but only one expected!!")
+      if(model_names.length>0){
+        this.log("WARNING: multiple model_names detected but only one expected!!")
+      }
     }
     let method_names= peak.detected_entities().filter(o => o.entity==='method_name')
     if (method_names.length === 1){
@@ -30,7 +32,14 @@ export default class RefineSpecOneModel extends SkillsBase{
       this.fsm().set_method_name(method_name)
     }
     else{
-      this.log("WARNING: multiple methods_names detected but only one expected!!")
+      if (method_names.length>0){
+        this.log("WARNING: multiple methods_names detected but only one expected!!")
+      }
+    }
+    let att_names = peak.detected_entities().filter(o=>o.entity==="att_name").map(o=>o.value)
+    if (att_names.length > 0){
+      this.log("att_names =>",att_names)
+      this.fsm().set_att_names(att_names)
     }
 
     this.next(convo,next)
@@ -110,6 +119,17 @@ export default class RefineSpecOneModel extends SkillsBase{
         let spec = await this.fsm().get_spec()
         convo.setVar("spec",spec)
         next()
+      }
+    )
+
+    controller.studio.beforeThread(this.script_name(),'ask_values',
+      (convo, next) =>{
+        let unp = this.fsm().current_unprocessed()
+        this.log("================>",unp)
+        if (unp){
+          convo.setVar("attribute",unp)
+        }
+        next()        
       }
     )
   }

@@ -2,7 +2,7 @@
 
 import { Instance, type InstanceBuilders } from './instance';
 import { Expectation, EXP_SEPARATOR } from './expectation';
-
+import { Step } from './step'
 
 type languages = "ruby" | "js" | "python";
 type object_types = Instance | Expectation;
@@ -47,6 +47,18 @@ export class BddConstructions {
         throw new Error("expectation_str not implemented for ${this.lang}")
     }
     return r;
+  }
+
+  step_str(step: Step): string {
+    let r:string
+    switch (this.lang){
+      case "ruby":
+        r = step.toString()
+        break
+      default:
+        throw new Error("step_str not implemented for ${this.lang}");
+    }
+    return r
   }
 
 }

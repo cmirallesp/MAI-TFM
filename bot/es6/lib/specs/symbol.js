@@ -1,7 +1,7 @@
 // @flow
 
 
-export type SymbolType = "string" | "number" | "collection" | "klass" | "null" | "method"  ;
+export type SymbolType = "string" | "number" | "collection" | "klass" | "null" | "method" | "reference"  ;
 //export type ValueType = number | string | Klass | Klass[] | null;
 export type Symbol = {
     name: string,

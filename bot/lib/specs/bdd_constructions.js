@@ -9,6 +9,8 @@ var _instance = require('./instance');
 
 var _expectation = require('./expectation');
 
+var _step = require('./step');
+
 class BddConstructions {
 
   constructor(lang = "ruby") {
@@ -46,6 +48,18 @@ class BddConstructions {
 
       default:
         throw new Error("expectation_str not implemented for ${this.lang}");
+    }
+    return r;
+  }
+
+  step_str(step) {
+    let r;
+    switch (this.lang) {
+      case "ruby":
+        r = step.toString();
+        break;
+      default:
+        throw new Error("step_str not implemented for ${this.lang}");
     }
     return r;
   }

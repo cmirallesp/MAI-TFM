@@ -90,6 +90,20 @@ export class FsmWithOneModel extends FsmBase {
     this.get_fsm().model_name = model_name
   }
 
+  set_att_names(names: *[]){
+    this.log("set_att_names=>",names)
+    this.get_fsm().att_names=names
+    this.get_fsm().unprocessed = cloneDeep(names)
+    this.get_fsm().current_unprocessed=this.get_fsm().unprocessed.shift()
+    this.log("unprocessed=>", this.get_fsm().unprocessed)
+  }
+
+  set_att_values(names: []){
+    this.log("set_att_values=>",names)
+    this.get_fsm().att_values=names
+    
+  }
+
   create_spec(): Spec{
     throw new Error("Abstract method `create_spec` must be over written")
   }
@@ -127,13 +141,15 @@ export class FsmWithOneModel extends FsmBase {
         name: 'next',
         from: 'ask_attributes',
         to: function (att: string) {
-          this.log("asking attributes")
+          //this.log("asking attributes")
           // if (!att) return 'ask_attributes' //loop if empty
           let [pn,av]= this.split_names(att)
           this.att_names= pn
           this.ask_att_values= av
           this.att_values = []
-          return this.decide_next_to_ask()
+          let r = this.decide_next_to_ask()
+          this.log("asking attributes 2",r)
+          return r
         }
       },
 
@@ -142,7 +158,7 @@ export class FsmWithOneModel extends FsmBase {
         from: 'ask_values',
         to: function (value: string) {
           this.att_values.push(value)
-          // this.log(`ask_values: [value => ${value}]. [values => $att_{this.values}]. [unprocessed => $att_{this.unprocessed}]`)
+          this.log(`ask_values: [value => ${value}]. [values => ${this.att_values}]. [unprocessed => ${this.unprocessed}]`)
           this.current_unprocessed = this.unprocessed.shift()
           return this.decide_next_to_ask()
         }
@@ -200,7 +216,7 @@ export class FsmWithOneModel extends FsmBase {
           // NOTE: order of if MATTERS!!
           // model_name => ask_method_name => (ask_params => ask_params_values)
           // => expected_value => ask_attributes
-          let result =''
+          let result =''          
           if (!this.model_name)  return 'ask_model_name'
           if (!this.method_name) return 'ask_method_name'
           if (this.with_params && this.ask_param_values){
@@ -210,7 +226,9 @@ export class FsmWithOneModel extends FsmBase {
           if (!this.expected_value) return 'ask_method_value'
           if (this.ask_att_values){
             if (this.att_names.length==0 ) return 'ask_attributes'
-            if (this.att_values.length==0) return 'ask_values'
+            this.log("=========>",this.unprocessed)
+            if (this.att_values.length==0) return 'ask_values'            
+            if (this.current_unprocessed) return 'ask_values'
           }
           //once we get show_spec => reset boolean parameters for the future
           this.ask_param_values = true

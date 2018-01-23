@@ -3,6 +3,7 @@
 import { Instance } from './instance'
 import { Expectation } from './expectation'
 import { BddConstructions } from './bdd_constructions'
+import { Step } from './step'
 
 type KindOfSpec = "ModelValidation" | "ModelMethod" | "Functionality";
 
@@ -11,12 +12,14 @@ export class Spec {
     //preconditions: hash instance_name,instance => 2 instances same name == same instance <klass_name,<instance_name,klass>>
     preconditions: Map<string, Instance>; //TODO: Instance[] (for multiple preconditions per instance name)
     expectations: Map<string,Expectation>; //TODO: Expectation[] (for multiple expectations per instance name)
+    steps: Array<Step>
     kindOfSpec: KindOfSpec;
 
     constructor(kindOfSpec: KindOfSpec) {
         this.kindOfSpec = kindOfSpec;
         this.preconditions = new Map();
         this.expectations = new Map();
+        this.steps = [];
     }
 
     static new_model_validation() {
@@ -25,6 +28,10 @@ export class Spec {
 
     static new_method_validation() {
         return new Spec("ModelMethod");
+    }
+    
+    static new_service_validation(){
+        return new Spec("Functionality")
     }
 
     add_precondition(k: Instance): Spec {
@@ -64,6 +71,9 @@ export class Spec {
             throw ex
         }
     }
+    add_step(step: Step){
+        this.steps.push(step)
+    }
     
     get_preconditions_str(): string {
         let r = [];
@@ -79,6 +89,15 @@ export class Spec {
         let bdd_constructors:BddConstructions = new BddConstructions()
         for(let [_,e: Expectation] of this.expectations){
             r.push(bdd_constructors.expectation_str(e))
+        }
+        return r.join('\n')
+    }
+
+    get_steps_str(): string{
+        let r=[];    
+        let bdd_constructors:BddConstructions = new BddConstructions()
+        for(let step of this.steps){
+            r.push(bdd_constructors.step_str(step))
         }
         return r.join('\n')
     }

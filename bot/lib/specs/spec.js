@@ -11,15 +11,18 @@ var _expectation = require('./expectation');
 
 var _bdd_constructions = require('./bdd_constructions');
 
+var _step = require('./step');
+
 class Spec {
-    //TODO: Instance[] (for multiple preconditions per instance name)
+    //TODO: Expectation[] (for multiple expectations per instance name)
+
+    //preconditions: hash instance_name,instance => 2 instances same name == same instance <klass_name,<instance_name,klass>>
     constructor(kindOfSpec) {
         this.kindOfSpec = kindOfSpec;
         this.preconditions = new Map();
         this.expectations = new Map();
-    } //TODO: Expectation[] (for multiple expectations per instance name)
-
-    //preconditions: hash instance_name,instance => 2 instances same name == same instance <klass_name,<instance_name,klass>>
+        this.steps = [];
+    } //TODO: Instance[] (for multiple preconditions per instance name)
 
 
     static new_model_validation() {
@@ -28,6 +31,10 @@ class Spec {
 
     static new_method_validation() {
         return new Spec("ModelMethod");
+    }
+
+    static new_service_validation() {
+        return new Spec("Functionality");
     }
 
     add_precondition(k) {
@@ -65,6 +72,9 @@ class Spec {
             throw ex;
         }
     }
+    add_step(step) {
+        this.steps.push(step);
+    }
 
     get_preconditions_str() {
         let r = [];
@@ -80,6 +90,15 @@ class Spec {
         let bdd_constructors = new _bdd_constructions.BddConstructions();
         for (let [_, e] of this.expectations) {
             r.push(bdd_constructors.expectation_str(e));
+        }
+        return r.join('\n');
+    }
+
+    get_steps_str() {
+        let r = [];
+        let bdd_constructors = new _bdd_constructions.BddConstructions();
+        for (let step of this.steps) {
+            r.push(bdd_constructors.step_str(step));
         }
         return r.join('\n');
     }

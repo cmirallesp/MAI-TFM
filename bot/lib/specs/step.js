@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Expectation = exports.EXP_SEPARATOR = undefined;
+exports.Step = exports.EXP_SEPARATOR = undefined;
 
 var _instance = require('./instance');
 
@@ -15,33 +15,34 @@ var _pluralize = require('pluralize');
 
 var pl = _interopRequireWildcard(_pluralize);
 
+var _util = require('util');
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 const EXP_SEPARATOR = exports.EXP_SEPARATOR = "__eq__";
 
-class Expectation {
-    constructor(model, symbol, members_sparator = '.') {
-        this.model = model;
+class Step {
+    constructor(instance, symbol, members_sparator = '.') {
+        this.instance = instance;
         this.symbol = symbol;
         this.members_sparator = members_sparator;
         this.parameters = new Map();
-        this.db = model.db;
     }
 
     //for symbols.type 'method'
 
 
-    static new_instance_method(model, method_name, expected_value = "") {
+    static new_method(instance, method_name) {
         let s = {
             name: method_name,
             type: "method",
-            value: expected_value
+            value: ""
         };
 
-        return new Expectation(model, s);
+        return new Step(instance, s);
     }
-    //TODO: implement new_instance_attribute to check state expectations
-    add_parameter(name, value) {
+
+    add_parameter(name, value, reference = false) {
         if (!this.symbol.type === 'method') {
             throw new Error("only methods have parameters");
         }
@@ -53,30 +54,10 @@ class Expectation {
         let sym = {
             name: name,
             value: value,
-            type: this.infer_type(name, value)
+            type: this.infer_type(name, value, reference)
         };
         this.parameters.set(name, sym);
         return this;
-    }
-
-    get_instance_name() {
-        return this.model.name;
-    }
-
-    get_symmbol_name() {
-        return this.symbol.name;
-    }
-
-    set_symbol_name(name) {
-        this.symbol.name = name;
-    }
-
-    get_expected_value() {
-        return this.symbol.value;
-    }
-
-    set_expected_value(value) {
-        this.symbol.value = value;
     }
 
     get_type_of_expected_value() {
@@ -97,23 +78,13 @@ class Expectation {
             });
             caller_str = `(${parameters_str})`;
         }
-        return `${this.model.name}${this.members_sparator}${this.symbol.name}${caller_str}${EXP_SEPARATOR}${this.symbol.value}`;
+        return `${this.instance}${this.members_sparator}${this.symbol.name}${caller_str}`;
     }
 
-    inDB(value) {
-        if (this.db == undefined) throw Error("sync error (db has not been loaded yet");
-        return this.db.inDB(pl.singular(value));
-    }
-
-    infer_type(name, value) {
+    infer_type(name, value, reference = false) {
         let r = "null";
-
-        if (this.inDB(name)) {
-            if (pl.isPlural(name)) {
-                r = "collection";
-            } else {
-                r = "klass";
-            }
+        if (reference) {
+            r = "reference";
         } else if (!isNaN(value)) {
             r = "number";
         } else {
@@ -122,4 +93,4 @@ class Expectation {
         return r;
     }
 }
-exports.Expectation = Expectation;
+exports.Step = Step;
