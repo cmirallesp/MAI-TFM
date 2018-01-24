@@ -11,7 +11,7 @@ const specs_mappings = new Map()
 			refine_thread: "refine_spec_method"})
 	.set("SERVICE_TEST",
 		{ description:"functionality specification",
-			refine_thread: "refine_spec_functionality"})
+			refine_thread: "spec_service"})
 	.set("MODEL_TEST",
 		{ description: "model specification",
 			refine_thread: "refine_model"

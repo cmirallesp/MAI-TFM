@@ -87,7 +87,7 @@ class Instance {
     for (let [_, v] of this.attributes) {
       let val;
       if (v.type === 'string') {
-        val = `"${v.value}"`;
+        val = `${v.value}`;
       } else {
         val = v.value;
       }

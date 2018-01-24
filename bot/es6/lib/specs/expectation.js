@@ -5,22 +5,24 @@ import {type Symbol, type SymbolType} from './symbol'
 import { DB } from './db';
 import * as pl from 'pluralize';
 
-export const EXP_SEPARATOR = "__eq__"
-
+export const EXP_SEPARATOR = "__##__"
 export class Expectation {
     model: Instance
     symbol: Symbol
     members_sparator: string
+    operator: string 
     db: DB
 
     //for symbols.type 'method'
-    parameters: Map<string, Symbol>
+    //parameters: Map<string, Symbol>
+    parameters: Array<string>
     constructor(model: Instance, symbol: Symbol, members_sparator: '.' | '->' | ':'='.') {
         this.model = model
         this.symbol= symbol
         this.members_sparator =members_sparator
-        this.parameters = new Map()
+        this.parameters = []
         this.db = model.db
+        this.operator = 'eq'
     }
 
     static new_instance_method(model: Instance, method_name: string,
@@ -46,9 +48,20 @@ export class Expectation {
         let sym: Symbol={
             name: name,
             value: value,
-            type: this.infer_type(name,value)
+            type: this.infer_type(value)
         }
-        this.parameters.set(name,sym)
+        //this.parameters.set(name,sym)
+        this.parameters.push(sym)
+        return this;
+    }
+
+    add_parameter(value: string){
+        if (!this.symbol.type === 'method'){
+            throw new Error("only methods have parameters")
+        }
+
+        //this.parameters.set(name,sym)
+        this.parameters.push(value)
         return this;
     }
 
@@ -76,17 +89,26 @@ export class Expectation {
         return this.symbol.type
     }
 
+    get_operator(){
+        return this.operator
+    }
+    set_operator(operator: string){
+        this.operator = operator
+    }
     toString(): string{
         let caller_str = ''
         if (this.symbol.type ==='method'){
             let parameters_str = ''
-            this.parameters.forEach((val: Symbol, key: string, _: *) =>{
-                let type_symbol = val.type === 'string' ?  '"' : ''
+            // this.parameters.forEach((val: Symbol, key: string, _: *) =>{
+                this.parameters.forEach((val: string, _: *) =>{
+                //let type_symbol = val.type === 'string' ?  '' : ''
                 if(parameters_str){
-                    parameters_str += `, ${key}: ${type_symbol}${val.value}${type_symbol}`
+                    // parameters_str += `, ${key}: ${type_symbol}${val.value}${type_symbol}`
+                    parameters_str += `, ${val}`
                 }
                 else{
-                    parameters_str += `${key}: ${type_symbol}${val.value}${type_symbol}`
+                    // parameters_str += `${key}: ${type_symbol}${val.value}${type_symbol}`
+                    parameters_str += `${val}`
                 }
             })
             caller_str= `(${parameters_str})`
@@ -95,21 +117,12 @@ export class Expectation {
 
     }
 
-    inDB(value: string){
-        if(this.db==undefined) throw Error ("sync error (db has not been loaded yet")
-        return this.db.inDB(pl.singular(value));
-    }
 
-    infer_type(name: string, value: string): SymbolType{
+    infer_type(value: string, is_reference: boolean =false): SymbolType{
         let r: SymbolType="null";
 
-        if (this.inDB(name)){
-            if (pl.isPlural(name)){
-                r = "collection"
-            }
-            else{
-                r = "klass"
-            }
+        if (is_reference){
+            r = "reference"
         }
         else if (!isNaN(value)){
             r = "number"

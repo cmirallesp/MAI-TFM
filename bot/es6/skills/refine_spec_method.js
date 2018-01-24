@@ -19,4 +19,16 @@ export default class RefineSpecMethod extends RefineSpecOneModel{
     this._fsm = new RefineSpecMethodFsm(this.script_name(),true)
   }
 
+  set_names_and_values(entities: *[]){
+    this.log("namessssss=>",entities)
+    let values =entities.filter((o,_,__) =>{
+      console.log(o.entity)
+      return o.entity === 'sym_value'
+    })
+    this.log("1) method values =>",values)
+    values = values.map((o,_,__)=>o.value)
+    this.log("2) method values =>",values)
+    this.fsm().set_par_values(values)
+  }
+
 }

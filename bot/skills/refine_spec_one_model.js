@@ -20,34 +20,42 @@ class RefineSpecOneModel extends _skills_base2.default {
     return this._fsm;
   }
 
+  set_names_and_values(entities) {}
+
   on_normally_started(convo, next) {
     //casting from FsmBase
     let peak = this._prev.fsm();
-    this.log("peak =>", peak.detected_entities());
-    let model_names = peak.detected_entities().filter(o => o.entity === 'model_name');
+    let detected_entities = peak.detected_entities();
+    //this.log("peak =>", peak.detected_entities())
+    let model_names = detected_entities.filter(o => o.entity === 'model_name');
     if (model_names.length === 1) {
       this.log("model_names =>", model_names);
       let model_name = model_names[0].value;
       this.fsm().set_model_name(model_name);
     } else {
-      if (model_names.length > 0) {
+      if (model_names.length > 1) {
         this.log("WARNING: multiple model_names detected but only one expected!!");
       }
     }
-    let method_names = peak.detected_entities().filter(o => o.entity === 'method_name');
+
+    let method_names = detected_entities.filter(o => o.entity === 'method');
     if (method_names.length === 1) {
       this.log("method_names =>", method_names);
       let method_name = method_names[0].value;
       this.fsm().set_method_name(method_name);
     } else {
-      if (method_names.length > 0) {
+      if (method_names.length > 1) {
         this.log("WARNING: multiple methods_names detected but only one expected!!");
       }
     }
-    let att_names = peak.detected_entities().filter(o => o.entity === "att_name").map(o => o.value);
-    if (att_names.length > 0) {
-      this.log("att_names =>", att_names);
-      this.fsm().set_att_names(att_names);
+
+    this.set_names_and_values(detected_entities);
+    let v_expected_value = detected_entities.filter(o => o.entity === 'expected_value');
+    if (v_expected_value.length > 0) {
+      let ev = v_expected_value[0].value;
+      this.fsm().set_expected_value(ev);
+      //if expected value has been detected don't ask for internal state 
+      this.fsm().set_ask_att(false);
     }
 
     this.next(convo, next);
@@ -118,7 +126,7 @@ class RefineSpecOneModel extends _skills_base2.default {
 
       var value = convo.extractResponse('param_value');
       this.next(convo, next, value);
-      convo.setVar("param", this.fsm().current_unprocessed());
+      // convo.setVar("param", this.fsm().current_unprocessed())
     });
 
     //before get_spec
@@ -130,7 +138,7 @@ class RefineSpecOneModel extends _skills_base2.default {
 
     controller.studio.beforeThread(this.script_name(), 'ask_values', (convo, next) => {
       let unp = this.fsm().current_unprocessed();
-      this.log("================>", unp);
+      this.log("beforeThread ask_values ===>", unp);
       if (unp) {
         convo.setVar("attribute", unp);
       }

@@ -13,7 +13,7 @@ exports.has_key = has_key;
 const specs_mappings = new Map().set("MODEL_VALIDATION", { description: "model validation specification",
 	refine_thread: "refine_spec_validation" }).set("MODEL_METHOD_TEST", { description: "model method specification",
 	refine_thread: "refine_spec_method" }).set("SERVICE_TEST", { description: "functionality specification",
-	refine_thread: "refine_spec_functionality" }).set("MODEL_TEST", { description: "model specification",
+	refine_thread: "spec_service" }).set("MODEL_TEST", { description: "model specification",
 	refine_thread: "refine_model"
 });
 function description(key) {

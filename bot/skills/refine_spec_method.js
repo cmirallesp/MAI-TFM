@@ -32,5 +32,17 @@ class RefineSpecMethod extends _refine_spec_one_model2.default {
     this._fsm = new _refine_spec_method_fsm.RefineSpecMethodFsm(this.script_name(), true);
   }
 
+  set_names_and_values(entities) {
+    this.log("namessssss=>", entities);
+    let values = entities.filter((o, _, __) => {
+      console.log(o.entity);
+      return o.entity === 'sym_value';
+    });
+    this.log("1) method values =>", values);
+    values = values.map((o, _, __) => o.value);
+    this.log("2) method values =>", values);
+    this.fsm().set_par_values(values);
+  }
+
 }
 exports.default = RefineSpecMethod;

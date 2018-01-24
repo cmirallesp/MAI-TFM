@@ -29,18 +29,15 @@ export class BddConstructions {
     return r
   }
 
-  get_operator(): string {
-    //TODO: at the moment only eq but we can do more depending on symbol.type
-    return 'eq'
-  }
+
 
   expectation_str(exp: Expectation): string {
     let r: string 
     let [left,right] = exp.toString().split(EXP_SEPARATOR);
-
+    
     switch (this.lang) {
       case "ruby":
-        r = `expect( ${left} ).to ${this.get_operator()} ${right}`
+        r = `expect( ${left} ).to ${exp.get_operator()} ${right}`
         break;
 
       default:

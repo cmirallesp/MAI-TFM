@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Step = exports.EXP_SEPARATOR = undefined;
+exports.Step = undefined;
 
 var _instance = require('./instance');
 
@@ -17,22 +17,31 @@ var pl = _interopRequireWildcard(_pluralize);
 
 var _util = require('util');
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+var _lemmatizer = require('lemmatizer');
 
-const EXP_SEPARATOR = exports.EXP_SEPARATOR = "__eq__";
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 class Step {
     constructor(instance, symbol, members_sparator = '.') {
         this.instance = instance;
         this.symbol = symbol;
         this.members_sparator = members_sparator;
-        this.parameters = new Map();
+        this.parameters = [];
     }
 
     //for symbols.type 'method'
 
 
     static new_method(instance, method_name) {
+        if (method_name.includes(" ")) {
+            let r = method_name.split(" ");
+            if (r.length == 2) {
+                method_name = (0, _lemmatizer.lemmatizer)(r[1]);
+            } else {
+                console.log("method_name more than one space", method_name);
+            }
+        }
+        console.log("====>", instance, method_name);
         let s = {
             name: method_name,
             type: "method",
@@ -42,21 +51,12 @@ class Step {
         return new Step(instance, s);
     }
 
-    add_parameter(name, value, reference = false) {
+    add_parameter(value, reference = false) {
         if (!this.symbol.type === 'method') {
             throw new Error("only methods have parameters");
         }
-
-        if (name === '') {
-            throw new Error("name cannot be blank");
-        }
-
-        let sym = {
-            name: name,
-            value: value,
-            type: this.infer_type(name, value, reference)
-        };
-        this.parameters.set(name, sym);
+        console.log("add_parameter =>", value, reference);
+        this.parameters.push(value);
         return this;
     }
 
@@ -68,12 +68,11 @@ class Step {
         let caller_str = '';
         if (this.symbol.type === 'method') {
             let parameters_str = '';
-            this.parameters.forEach((val, key, _) => {
-                let type_symbol = val.type === 'string' ? '"' : '';
+            this.parameters.forEach((val, _) => {
                 if (parameters_str) {
-                    parameters_str += `, ${key}: ${type_symbol}${val.value}${type_symbol}`;
+                    parameters_str += `, ${val}`;
                 } else {
-                    parameters_str += `${key}: ${type_symbol}${val.value}${type_symbol}`;
+                    parameters_str += `${val}`;
                 }
             });
             caller_str = `(${parameters_str})`;

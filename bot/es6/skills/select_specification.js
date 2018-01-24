@@ -48,6 +48,8 @@ export default class SelectSpecification extends SkillsBase{
     // Validate user input: test_request answer given by the user specifiyng the kind of test
     controller.studio.validate('select_specification','test_request', (convo, next) => {
       let value = convo.extractResponse('test_request')
+      
+      value = value.replace(/[‘’]/g,"'")
       this.log(`VALIDATE select_specification VARIABLE: test_request VALUE: ${value}`)
       //this.call_rasa(value, convo, next)
       let project = "default"      

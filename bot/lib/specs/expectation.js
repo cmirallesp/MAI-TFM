@@ -17,18 +17,19 @@ var pl = _interopRequireWildcard(_pluralize);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
-const EXP_SEPARATOR = exports.EXP_SEPARATOR = "__eq__";
-
+const EXP_SEPARATOR = exports.EXP_SEPARATOR = "__##__";
 class Expectation {
     constructor(model, symbol, members_sparator = '.') {
         this.model = model;
         this.symbol = symbol;
         this.members_sparator = members_sparator;
-        this.parameters = new Map();
+        this.parameters = [];
         this.db = model.db;
+        this.operator = 'eq';
     }
 
     //for symbols.type 'method'
+    //parameters: Map<string, Symbol>
 
 
     static new_instance_method(model, method_name, expected_value = "") {
@@ -53,9 +54,19 @@ class Expectation {
         let sym = {
             name: name,
             value: value,
-            type: this.infer_type(name, value)
-        };
-        this.parameters.set(name, sym);
+            type: this.infer_type(value)
+            //this.parameters.set(name,sym)
+        };this.parameters.push(sym);
+        return this;
+    }
+
+    add_parameter(value) {
+        if (!this.symbol.type === 'method') {
+            throw new Error("only methods have parameters");
+        }
+
+        //this.parameters.set(name,sym)
+        this.parameters.push(value);
         return this;
     }
 
@@ -83,16 +94,25 @@ class Expectation {
         return this.symbol.type;
     }
 
+    get_operator() {
+        return this.operator;
+    }
+    set_operator(operator) {
+        this.operator = operator;
+    }
     toString() {
         let caller_str = '';
         if (this.symbol.type === 'method') {
             let parameters_str = '';
-            this.parameters.forEach((val, key, _) => {
-                let type_symbol = val.type === 'string' ? '"' : '';
+            // this.parameters.forEach((val: Symbol, key: string, _: *) =>{
+            this.parameters.forEach((val, _) => {
+                //let type_symbol = val.type === 'string' ?  '' : ''
                 if (parameters_str) {
-                    parameters_str += `, ${key}: ${type_symbol}${val.value}${type_symbol}`;
+                    // parameters_str += `, ${key}: ${type_symbol}${val.value}${type_symbol}`
+                    parameters_str += `, ${val}`;
                 } else {
-                    parameters_str += `${key}: ${type_symbol}${val.value}${type_symbol}`;
+                    // parameters_str += `${key}: ${type_symbol}${val.value}${type_symbol}`
+                    parameters_str += `${val}`;
                 }
             });
             caller_str = `(${parameters_str})`;
@@ -100,20 +120,11 @@ class Expectation {
         return `${this.model.name}${this.members_sparator}${this.symbol.name}${caller_str}${EXP_SEPARATOR}${this.symbol.value}`;
     }
 
-    inDB(value) {
-        if (this.db == undefined) throw Error("sync error (db has not been loaded yet");
-        return this.db.inDB(pl.singular(value));
-    }
-
-    infer_type(name, value) {
+    infer_type(value, is_reference = false) {
         let r = "null";
 
-        if (this.inDB(name)) {
-            if (pl.isPlural(name)) {
-                r = "collection";
-            } else {
-                r = "klass";
-            }
+        if (is_reference) {
+            r = "reference";
         } else if (!isNaN(value)) {
             r = "number";
         } else {

@@ -32,7 +32,7 @@ class SelectSpecificationFsm extends _fsm_base.FsmBase {
 				from: 'offer_help',
 				//from: 'waiting_user_request',
 				to: function (intent_type, intent_confidence, entities) {
-					this.log(`intent_type => ${intent_type} intent_confidence => ${intent_confidence} entities => ${entities}`);
+					this.log(`intent_type => ${intent_type} intent_confidence => ${intent_confidence}`);
 					let r = null;
 					let str = '';
 					if (LOW_THR1 > intent_confidence && entities.length == 0) {

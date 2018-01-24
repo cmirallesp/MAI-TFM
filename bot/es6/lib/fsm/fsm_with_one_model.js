@@ -42,10 +42,13 @@ export class FsmWithOneModel extends FsmBase {
     let expectation = Expectation.new_instance_method(
       mut, this.fsm.method_name, this.fsm.expected_value
     )
+    
     //initial values
-    s = zip(this.fsm.param_names, this.fsm.param_values)
-    s.forEach(([name, value], idx) => {
-      expectation.add_parameter(name, value)
+    // s = zip(this.fsm.param_names, this.fsm.param_values)
+    
+    // s.forEach(([name, value], idx) => {
+    this.fsm.param_values.forEach((value,_)=>{
+      expectation.add_parameter( value)
     })
     this.spec.add_expectation(expectation)
     return [mut, expectation]
@@ -92,16 +95,35 @@ export class FsmWithOneModel extends FsmBase {
 
   set_att_names(names: *[]){
     this.log("set_att_names=>",names)
-    this.get_fsm().att_names=names
-    this.get_fsm().unprocessed = cloneDeep(names)
-    this.get_fsm().current_unprocessed=this.get_fsm().unprocessed.shift()
-    this.log("unprocessed=>", this.get_fsm().unprocessed)
+    if (names.length>0){
+      this.get_fsm().att_names=names
+    }
+    //this.get_fsm().unprocessed = cloneDeep(names)
+    //this.get_fsm().current_unprocessed=this.get_fsm().unprocessed.shift()
+    //this.log("unprocessed=>", this.get_fsm().unprocessed)
   }
 
-  set_att_values(names: []){
+  set_att_values(names: *[]){
     this.log("set_att_values=>",names)
     this.get_fsm().att_values=names
     
+    names.forEach((val,index,_)=>{
+      if (val=='undefined'){
+        this.get_fsm().unprocessed.push(this.get_fsm().att_names[index])
+      }
+    })
+    this.log("unprocessed=>", this.get_fsm().unprocessed)
+    this.get_fsm().current_unprocessed=this.get_fsm().unprocessed.shift()
+  }
+
+  set_par_values(values: *[]){
+    this.log("set_par_values ==>",values)
+    this.get_fsm().param_values=values
+  }
+
+  set_ask_att(v: boolean){
+    this.log("=====>",v)
+    this.get_fsm().ask_att_values = v
   }
 
   create_spec(): Spec{
@@ -146,7 +168,8 @@ export class FsmWithOneModel extends FsmBase {
           let [pn,av]= this.split_names(att)
           this.att_names= pn
           this.ask_att_values= av
-          this.att_values = []
+          this.att_values = this.att_names.map(_ => 'undefined')
+          //this.att_values = []
           let r = this.decide_next_to_ask()
           this.log("asking attributes 2",r)
           return r
@@ -157,9 +180,14 @@ export class FsmWithOneModel extends FsmBase {
         name: 'next',
         from: 'ask_values',
         to: function (value: string) {
-          this.att_values.push(value)
+          let idx=this.att_values.indexOf('undefined')
+          this.log("idx===>",idx)
+          this.att_values[idx]=value
           this.log(`ask_values: [value => ${value}]. [values => ${this.att_values}]. [unprocessed => ${this.unprocessed}]`)
           this.current_unprocessed = this.unprocessed.shift()
+          // if(!this.current_unprocessed){
+          //   this.ask_att_values=false
+          // }
           return this.decide_next_to_ask()
         }
       },
@@ -169,11 +197,10 @@ export class FsmWithOneModel extends FsmBase {
         from: 'ask_params',
         to: function (params: string) {
           this.log("asking params:",params)
-          // if (!params) return 'ask_params' //loop if empty
           let [pn,av] = this.split_names(params) 
           this.param_names = pn 
           this.ask_param_values = av
-          //[this.param_names,this.ask_param_values] = this.split_names(params)
+          
           this.param_values = []
           return this.decide_next_to_ask()
         }
@@ -183,9 +210,12 @@ export class FsmWithOneModel extends FsmBase {
         name: 'next',
         from: 'ask_param_values',
         to: function (value: string) {
-          this.param_values.push(value)
+          let vals = Array.from(value.split(/[.,;]/))
+          this.log("vals==>",vals)
+          this.param_values = vals
+          //this.param_values.push(value)
           // this.log(`ask_param_values: [value => ${value}]. [param_values => ${this.param_values}]. [unprocessed => ${this.unprocessed}]`)
-          this.current_unprocessed = this.unprocessed.shift()
+          //this.current_unprocessed = this.unprocessed.shift()
           return this.decide_next_to_ask()
         }
       }],
@@ -220,15 +250,18 @@ export class FsmWithOneModel extends FsmBase {
           if (!this.model_name)  return 'ask_model_name'
           if (!this.method_name) return 'ask_method_name'
           if (this.with_params && this.ask_param_values){
-            if (this.param_names.length==0) return 'ask_params'  
+            //if (this.param_names.length==0) return 'ask_params'  
             if (this.param_values.length==0) return 'ask_param_values'
+            // if (this.current_unprocessed) return 'ask_param_values'
           }
           if (!this.expected_value) return 'ask_method_value'
           if (this.ask_att_values){
             if (this.att_names.length==0 ) return 'ask_attributes'
-            this.log("=========>",this.unprocessed)
             if (this.att_values.length==0) return 'ask_values'            
-            if (this.current_unprocessed) return 'ask_values'
+            if (this.current_unprocessed){ 
+              this.log("llll")
+              return 'ask_values'
+            }
           }
           //once we get show_spec => reset boolean parameters for the future
           this.ask_param_values = true
