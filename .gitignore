@@ -8,3 +8,5 @@ nlp_unit/model_spacy
 venv
 bin/nlp_unit/projects/default
 bin/nlp_unit/model_mitie
+bot/.data
+bot/.env
